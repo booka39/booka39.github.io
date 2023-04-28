@@ -53,7 +53,7 @@ header {
 header .text-holder {
     color: black;
     position: absolute;
-    top: 60%;
+    top: 55%;
     right: 50%;
     transform: translate(50%, -50%);
     max-width: 600px;
@@ -130,6 +130,13 @@ header .datacamp {
     font-size: 20px;
     line-height: 1.7;
     color: #000000;
+}
+
+@media (max-width: 575px) {
+    header .text-holder {
+        max-width: none;
+        padding: 0;
+    }
 }
 
 
