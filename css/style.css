@@ -61,7 +61,7 @@ header .text-holder {
 }
 
 header .icons .twitter {
-    color: #1DA1F2;
+    color: #1da1f2;
     font-size: 25px;
     background-color: white;
     border: black solid 2px;
@@ -72,7 +72,7 @@ header .icons .linkedin:hover,
 header .icons .tableau:hover {
     background-color: black;
     cursor: pointer;
-    transition: all ease-in .25s;
+    transition: all ease-in 0.25s;
 }
 
 header .icons .linkedin {
@@ -94,16 +94,24 @@ header .text {
 }
 
 header .arrow-down {
-    font-size: 80px;
-    color: white;
-    stroke-width: 10px;
+    font-size: 60px;
+    color: #198754;
     stroke: #198754;
+    stroke-width: 10px;
 }
 
 header .arrow-down:hover {
     cursor: pointer;
-    color: #198754;
-    transition: all ease-in-out .25s;
+    color: white;
+    transition: all ease-in-out 0.25s;
+}
+
+header .datacamp {
+    color: #0072b1;
+}
+
+.datacamp:hover {
+    text-decoration: underline;
 }
 
 
@@ -115,19 +123,13 @@ header .arrow-down:hover {
 .intro {
     padding-top: 15vh;
     padding-bottom: 15vh;
-    background-color: #DFF9EE;
+    background-color: #dff9ee;
 }
 
 .intro p {
     font-size: 20px;
     line-height: 2.25;
     color: #000000;
-}
-
-.intro .name {
-    font-size: 30px;
-    font-weight: 500;
-    color: #2BD984;
 }
 
 
