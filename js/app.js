@@ -11,6 +11,48 @@ particlesJS.load('particles-js', 'particles.json', function() {
 
 /* Otherwise just put the config content (json): */
 
+//import elements
+let lis = document.querySelectorAll('.navbar-nav li');
+
+//active nav 
+lis[0].classList.add("active");
+lis.forEach(function(e) {
+    e.addEventListener('click', function() {
+        lis.forEach(function(ele) {
+            ele.classList.remove("active");
+        })
+        e.classList.add("active");
+    })
+});
+//nav section activation
+window.addEventListener('scroll', () => console.log(window.scrollY))
+
+window.addEventListener('scroll', () => {
+        if (window.scrollY <= 1005) {
+            lis[0].classList.add('active');
+            lis[1].classList.remove("active");
+            lis[2].classList.remove("active");
+            lis[3].classList.remove("active");
+        } else if (window.scrollY > 1144 && window.scrollY <= 2000) {
+            lis[3].classList.add('active');
+            lis[0].classList.remove("active");
+            lis[2].classList.remove("active");
+            lis[1].classList.remove("active");
+        }
+    })
+    //} else if (window.scrollY > 1200 && window.scrollY <= 2000) {
+    //  lis[2].classList.add('active');
+    //lis[0].classList.remove("active");
+    //lis[1].classList.remove("active");
+    //lis[3].classList.remove("active");
+    //} else {
+    // window.scrollY > 2001 && window.scrollY <= 2400
+    // lis[3].classList.add('active');
+    // lis[2].classList.remove("active");
+    // lis[1].classList.remove("active");
+    // lis[0].classList.remove("active");
+    //}; );
+
 particlesJS('particles-js',
 
     {

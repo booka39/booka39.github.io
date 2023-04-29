@@ -24,6 +24,20 @@ nav {
     background-color: #ffffff;
 }
 
+nav .navbar-nav li a:hover {
+    color: #ffffff !important;
+    background-color: #198754;
+}
+
+.active {
+    background-color: #198754;
+}
+
+.active a {
+    color: white !important;
+    transition: 0ms;
+}
+
 
 /*  end nav*/
 
