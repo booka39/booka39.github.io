@@ -173,3 +173,45 @@ particlesJS('particles-js',
     }
 
 );
+//hover on svg icons
+let cards = document.querySelectorAll('.card');
+let svgHover = document.querySelectorAll('#services .svg-hover');
+// Initially hide all svgHover
+svgHover.forEach((element) => {
+    element.style.display = 'none';
+});
+cards.forEach((card) => {
+    let svgHover = card.querySelector('.svg-hover');
+    let svg = card.querySelector('.svg');
+
+    card.addEventListener('mouseover', () => {
+        svgHover.style.display = 'block';
+        svg.style.display = 'none';
+    });
+
+    card.addEventListener('mouseout', () => {
+        svgHover.style.display = 'none';
+        svg.style.display = 'block';
+    });
+});
+
+
+//let cards = document.querySelectorAll('#services .card');
+//let svg = document.querySelectorAll('#services .svg');
+
+// Event listener for mouseover
+//cards.forEach((card) => {
+//   card.addEventListener('mouseover', function() {
+//      svgHover.forEach((element) => {
+//        element.style.display = 'block';
+//  });
+//  svgHover.forEach((element) => {
+//    element.style.display = 'none';
+//  });
+//  });
+// });
+
+
+
+
+console.log(svgHover);

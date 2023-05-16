@@ -25,16 +25,16 @@ nav {
 }
 
 nav .navbar-nav li a:hover {
-    color: #ffffff !important;
-    background-color: #198754;
+    color: black !important;
+    /*background-color: #198754;*/
 }
 
 .active {
-    background-color: #198754;
+    border-bottom: solid 2px #198754;
 }
 
 .active a {
-    color: white !important;
+    color: black !important;
     transition: 0ms;
 }
 
@@ -155,6 +155,26 @@ header .datacamp {
 
 
 /*  end intro*/
+
+
+/*  start services*/
+
+#services {
+    background-color: #198754;
+}
+
+#services .card {
+    background-color: #dff9ee;
+}
+
+@media (max-width: 767px) {
+    #services .card img {
+        margin-left: 40% !important;
+    }
+}
+
+
+/*  end services*/
 
 
 /*  start contact*/
