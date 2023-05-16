@@ -25,33 +25,41 @@ lis.forEach(function(e) {
     })
 });
 //nav section activation
-window.addEventListener('scroll', () => console.log(window.scrollY))
-
 window.addEventListener('scroll', () => {
-        if (window.scrollY <= 1005) {
-            lis[0].classList.add('active');
-            lis[1].classList.remove("active");
-            lis[2].classList.remove("active");
-            lis[3].classList.remove("active");
-        } else if (window.scrollY > 1144 && window.scrollY <= 2000) {
-            lis[3].classList.add('active');
-            lis[0].classList.remove("active");
-            lis[2].classList.remove("active");
-            lis[1].classList.remove("active");
-        }
-    })
-    //} else if (window.scrollY > 1200 && window.scrollY <= 2000) {
-    //  lis[2].classList.add('active');
-    //lis[0].classList.remove("active");
-    //lis[1].classList.remove("active");
-    //lis[3].classList.remove("active");
-    //} else {
-    // window.scrollY > 2001 && window.scrollY <= 2400
-    // lis[3].classList.add('active');
-    // lis[2].classList.remove("active");
-    // lis[1].classList.remove("active");
-    // lis[0].classList.remove("active");
-    //}; );
+    console.log(window.scrollY);
+
+    const lis = document.querySelectorAll('ul li');
+
+    if (window.scrollY <= 1005) {
+        lis[0].classList.add('active');
+        lis[1].classList.remove('active');
+        lis[2].classList.remove('active');
+        lis[3].classList.remove('active');
+    } else if (window.scrollY > 1005 && window.scrollY <= 1633) {
+        lis[1].classList.add('active');
+        lis[0].classList.remove('active');
+        lis[2].classList.remove('active');
+        lis[3].classList.remove('active');
+    } else if (window.scrollY > 1633 && window.scrollY <= 1634) {
+        lis[2].classList.add('active');
+        lis[0].classList.remove('active');
+        lis[1].classList.remove('active');
+        lis[3].classList.remove('active');
+    } else {
+        lis[3].classList.add('active');
+        lis[0].classList.remove('active');
+        lis[1].classList.remove('active');
+        lis[2].classList.remove('active');
+    }
+});
+
+// else {
+// window.scrollY > 2001 && window.scrollY <= 2400
+// lis[3].classList.add('active');
+// lis[2].classList.remove("active");
+// lis[1].classList.remove("active");
+// lis[0].classList.remove("active");
+//}; );
 
 particlesJS('particles-js',
 
@@ -194,24 +202,3 @@ cards.forEach((card) => {
         svg.style.display = 'block';
     });
 });
-
-
-//let cards = document.querySelectorAll('#services .card');
-//let svg = document.querySelectorAll('#services .svg');
-
-// Event listener for mouseover
-//cards.forEach((card) => {
-//   card.addEventListener('mouseover', function() {
-//      svgHover.forEach((element) => {
-//        element.style.display = 'block';
-//  });
-//  svgHover.forEach((element) => {
-//    element.style.display = 'none';
-//  });
-//  });
-// });
-
-
-
-
-console.log(svgHover);
