@@ -177,6 +177,52 @@ header .datacamp {
 /*  end services*/
 
 
+/* start portfolio */
+
+#portfolio {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    background-color: #dff9ee;
+}
+
+#portfolio .projects .project:hover {
+    cursor: pointer;
+}
+
+#portfolio .projects .card-img-overlay {
+    background-color: rgb(223 249 238 / 83%);
+    display: none;
+}
+
+.link-survey-project {
+    color: blue;
+}
+
+.link-survey-project:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+#portfolio .carousel {
+    max-width: 80%;
+}
+
+#portfolio .modal img {
+    max-width: 70%;
+}
+
+#portfolio .modal img,
+#portfolio .carousel {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+
+/* end portfolio */
+
+
 /*  start contact*/
 
 .contact {
@@ -190,4 +236,4 @@ header .datacamp {
 }
 
 
-/*  end contact*/
+/* end contact */
