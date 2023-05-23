@@ -40,7 +40,7 @@ window.addEventListener('scroll', () => {
         lis[0].classList.remove('active');
         lis[2].classList.remove('active');
         lis[3].classList.remove('active');
-    } else if (window.scrollY > 1633 && window.scrollY <= 1634) {
+    } else if (window.scrollY > 1633 && window.scrollY <= 2116) {
         lis[2].classList.add('active');
         lis[0].classList.remove('active');
         lis[1].classList.remove('active');
@@ -182,7 +182,7 @@ particlesJS('particles-js',
 
 );
 //hover on svg icons
-let cards = document.querySelectorAll('.card');
+let cards = document.querySelectorAll('#services .card');
 let svgHover = document.querySelectorAll('#services .svg-hover');
 // Initially hide all svgHover
 svgHover.forEach((element) => {

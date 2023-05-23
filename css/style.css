@@ -191,7 +191,13 @@ header .datacamp {
 
 #portfolio .projects .card-img-overlay {
     background-color: rgb(223 249 238 / 83%);
-    display: none;
+    opacity: 0;
+}
+
+#portfolio .project .card:hover .card-img-overlay {
+    display: block;
+    opacity: 1;
+    transition: all ease-in-out 0.3s;
 }
 
 .link-survey-project {
@@ -217,6 +223,25 @@ header .datacamp {
     top: 50%;
     left: 50%;
     transform: translate(-50%, 0%);
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    #portfolio .card-img-overlay .card-title {
+        font-size: 16px;
+    }
+    #portfolio .card-img-overlay .card-text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 767px) {
+    #portfolio .card-img-overlay .card-title {
+        font-size: 28px;
+    }
+    #portfolio .card-img-overlay .card-text {
+        font-size: 20px;
+        margin-top: 10vh;
+    }
 }
 
 
