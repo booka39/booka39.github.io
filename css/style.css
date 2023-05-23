@@ -190,7 +190,7 @@ header .datacamp {
 }
 
 #portfolio .projects .card-img-overlay {
-    background-color: rgb(223 249 238 / 83%);
+    background-color: rgba(157, 243, 207, 0.83);
     opacity: 0;
 }
 
