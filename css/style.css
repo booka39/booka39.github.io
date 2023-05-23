@@ -64,6 +64,10 @@ header {
     overflow: hidden;
 }
 
+header .title img {
+    max-width: 19%;
+}
+
 header .text-holder {
     color: black;
     position: absolute;
@@ -74,32 +78,61 @@ header .text-holder {
     padding: 2em 3em;
 }
 
+.line {
+    height: 2px;
+    background-color: #000;
+    margin: 0 auto 20px;
+    max-width: 30%;
+}
+
 header .icons .twitter {
-    color: #1da1f2;
     font-size: 25px;
-    background-color: white;
+    background-color: black;
     border: black solid 2px;
+}
+
+header .icons .twitter,
+header .icons .linkedin {
+    color: white;
+}
+
+header .icons .twitter:hover {
+    background-color: #1da1f2;
+    border: #1da1f2 solid 2px;
+}
+
+header .icons .linkedin:hover {
+    background-color: #0072b1;
+    border: #0072b1 solid 2px;
+}
+
+header .icons .linkedin:hover {
+    background-color: #0072b1;
+    border: #0072b1 solid 2px;
+}
+
+header .icons .tableau:hover {
+    background-color: #21467f;
+    border: #21467f solid 2px;
 }
 
 header .icons .twitter:hover,
 header .icons .linkedin:hover,
 header .icons .tableau:hover {
-    background-color: black;
     cursor: pointer;
     transition: all ease-in 0.25s;
 }
 
 header .icons .linkedin {
-    color: #0072b1;
     font-size: 25px;
-    background-color: white;
+    background-color: black;
     border: black solid 2px;
 }
 
 header .icons .tableau {
     max-width: 47px;
     margin-bottom: 26px;
-    background-color: white;
+    background-color: black;
     border: black solid 2px;
 }
 
@@ -180,7 +213,16 @@ header .datacamp {
 /* start portfolio */
 
 #portfolio {
-    background-color: #dff9ee;
+    background-color: #f8f9fa;
+}
+
+#portfolio .active-btn {
+    background-color: #1d8754;
+    color: white;
+}
+
+#portfolio .card {
+    border: 0px solid;
 }
 
 #portfolio .projects .project:hover {
@@ -188,8 +230,9 @@ header .datacamp {
 }
 
 #portfolio .projects .card-img-overlay {
-    background-color: rgba(157, 243, 207, 0.83);
+    background-color: rgba(88, 170, 151, 0.7);
     opacity: 0;
+    color: white;
 }
 
 #portfolio .project .card:hover .card-img-overlay {

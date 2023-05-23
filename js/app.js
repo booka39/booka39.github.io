@@ -53,13 +53,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// else {
-// window.scrollY > 2001 && window.scrollY <= 2400
-// lis[3].classList.add('active');
-// lis[2].classList.remove("active");
-// lis[1].classList.remove("active");
-// lis[0].classList.remove("active");
-//}; );
+
 
 particlesJS('particles-js',
 
@@ -201,4 +195,75 @@ cards.forEach((card) => {
         svgHover.style.display = 'none';
         svg.style.display = 'block';
     });
+});
+
+// Get all the buttons
+const buttons = document.querySelectorAll('.btns button');
+
+// Add click event listener to each button
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        buttons.forEach(btn => btn.classList.remove('active-btn'));
+        // Add active class to the clicked button
+        button.classList.add('active-btn');
+    });
+});
+
+
+// Add an event listener to each button
+document.querySelectorAll('.btns button').forEach(button => {
+    button.addEventListener('click', () => {
+        const buttonId = button.getAttribute('id'); // Get the id of the clicked button
+        const projects = document.querySelectorAll('.project'); // Get all project elements
+        //Add new classes to row
+        if (window.innerWidth > 767) {
+            const row = document.querySelector('#portfolio .projects .row');
+
+            if (buttonId == 'shaw-all') {
+                row.classList.remove('row-cols-2', 'justify-content-center');
+                row.classList.add('row-cols-1', 'row-cols-md-3', 'row-cols-lg-4');
+            } else {
+                row.classList.add('row-cols-2', 'justify-content-center');
+                row.classList.remove('row-cols-1', 'row-cols-md-3', 'row-cols-lg-4');
+            }
+        } else {
+
+            const row = document.querySelector('#portfolio .projects .row');
+
+            if (buttonId == 'shaw-all') {
+                row.classList.remove('row-cols-2', 'justify-content-center');
+                row.classList.add('row-cols-1');
+            } else {
+                row.classList.add('row-cols-1');
+                row.classList.remove('row-cols-2');
+            }
+        }
+
+
+        // Iterate over each project and toggle their visibility based on the button clicked
+        projects.forEach(project => {
+            if (buttonId === 'show-all') {
+                project.style.display = 'block'; // Show all projects
+            } else if (project.classList.contains(buttonId)) {
+                project.style.display = 'block'; // Show the projects with matching class
+            } else {
+                project.style.display = 'none'; // Hide the projects without matching class
+            }
+        });
+
+        // Toggle the active class on the clicked button
+        document.querySelector('.btns .active-btn').classList.remove('active-btn');
+        button.classList.add('active-btn');
+    });
+});
+
+// Set the initial display for each project
+const projects = document.querySelectorAll('.project');
+projects.forEach(project => {
+    if (project.classList.contains('e-commerce')) {
+        project.style.display = 'block';
+    } else {
+        project.style.display = 'none';
+    }
 });
