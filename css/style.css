@@ -180,8 +180,6 @@ header .datacamp {
 /* start portfolio */
 
 #portfolio {
-    padding-top: 15vh;
-    padding-bottom: 15vh;
     background-color: #dff9ee;
 }
 
@@ -249,11 +247,6 @@ header .datacamp {
 
 
 /*  start contact*/
-
-.contact {
-    padding-top: 15vh;
-    padding-bottom: 15vh;
-}
 
 .contact .text {
     font-size: 20px;
