@@ -200,6 +200,11 @@ header .datacamp {
     background-color: #dff9ee;
 }
 
+#services .dashboard-hover {
+    margin-top: -4px;
+    margin-bottom: -4px;
+}
+
 @media (max-width: 767px) {
     #services .card img {
         margin-left: 40% !important;
