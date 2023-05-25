@@ -25,10 +25,12 @@ lis.forEach(function(e) {
     })
 });
 //nav section activation
+
+
 window.addEventListener('scroll', () => {
     console.log(window.scrollY);
 
-    const lis = document.querySelectorAll('ul li');
+    const lis = document.querySelectorAll('nav ul li');
 
     if (window.scrollY <= 1005) {
         lis[0].classList.add('active');
@@ -53,7 +55,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
+//background animated
 
 particlesJS('particles-js',
 
