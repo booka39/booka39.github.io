@@ -93,6 +93,7 @@ header .icons .twitter {
 header .icons .twitter,
 header .icons .linkedin {
     color: white;
+    border: 4px solid black;
 }
 
 header .icons .twitter:hover {
@@ -116,6 +117,7 @@ header .icons .linkedin:hover,
 header .icons .tableau:hover {
     cursor: pointer;
     transition: all ease-in 0.25s;
+    border: 4px solid black;
 }
 
 header .icons .linkedin {
@@ -124,8 +126,8 @@ header .icons .linkedin {
 }
 
 header .icons .tableau {
-    max-width: 49px;
-    margin-bottom: 30px;
+    max-width: 55px;
+    margin-bottom: 33px;
     background-color: black;
 }
 
