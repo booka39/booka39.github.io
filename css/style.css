@@ -88,85 +88,94 @@ header .text-holder {
 header .icons .twitter,
 header .icons .linkedin {
     color: white;
-    font-size: 25px;
-    width: 25px;
-    height: 25px;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
     background-color: black;
 }
 
-header .icons .twitter {
-    width: 28px;
-    height: 28px;
-}
-
-
-}
 header .icons .twitter:hover {
     background-color: #1da1f2;
 }
+
 header .icons .linkedin:hover {
     background-color: #0072b1;
     border: #0072b1 solid 2px;
 }
+
 header .icons .linkedin:hover {
     background-color: #0072b1;
     border: #0072b1 solid 2px;
 }
+
 header .icons .tableau:hover {
     background-color: #21467f;
     border: #21467f solid 2px;
 }
+
 header .icons .twitter:hover,
 header .icons .linkedin:hover,
 header .icons .tableau:hover {
     cursor: pointer;
     transition: all ease-in 0.25s;
 }
+
 header .icons .linkedin {
     font-size: 25px;
     background-color: black;
     border: black solid 2px;
 }
+
 header .icons .tableau {
     max-width: 47px;
     margin-bottom: 27px;
     background-color: black;
     border: black solid 2px;
 }
+
 header .text {
     font-size: 20px;
 }
+
 header .arrow-down {
     font-size: 60px;
     color: #198754;
     stroke: #198754;
     stroke-width: 10px;
 }
+
 header .arrow-down:hover {
     cursor: pointer;
     color: white;
     transition: all ease-in-out 0.25s;
 }
+
 header .datacamp {
     color: #0072b1;
 }
+
 .datacamp:hover {
     text-decoration: underline;
 }
 
+
 /*  end header*/
 
+
 /*  start intro*/
+
 .intro {
     padding-top: 15vh;
     padding-bottom: 15vh;
     background-color: #dff9ee;
 }
+
 .intro p {
     font-size: 20px;
     line-height: 1.7;
     color: #000000;
 }
+
 @media (max-width: 575px) {
     header .text-holder {
         max-width: none;
@@ -174,64 +183,83 @@ header .datacamp {
     }
 }
 
+
 /*  end intro*/
 
+
 /*  start services*/
+
 #services {
     background-color: #198754;
 }
+
 #services .card {
     background-color: #dff9ee;
 }
+
 #services .dashboard-hover {
     margin-top: -4px;
     margin-bottom: -4px;
 }
+
 @media (max-width: 767px) {
     #services .card img {
         margin-left: 40% !important;
     }
 }
 
+
 /*  end services*/
 
+
 /* start portfolio */
+
 #portfolio {
     background-color: #f8f9fa;
 }
+
 #portfolio .active-btn {
     background-color: #1d8754;
     color: white;
 }
+
 #portfolio .card {
     border: 0px solid;
 }
+
 #portfolio .projects .project:hover {
     cursor: pointer;
 }
+
 #portfolio .projects .card-img-overlay {
     background-color: rgba(88, 170, 151, 0.7);
     opacity: 0;
     color: white;
 }
+
 #portfolio .project .card:hover .card-img-overlay {
     display: block;
     opacity: 1;
     transition: all ease-in-out 0.3s;
 }
+
 .link-survey-project {
     color: blue;
 }
+
 .link-survey-project:hover {
     text-decoration: underline;
     color: blue;
 }
+
 #portfolio .carousel {
     max-width: 80%;
 }
+
 #portfolio .modal img {
     max-width: 70%;
 }
+
 #portfolio .modal img,
 #portfolio .carousel {
     position: relative;
@@ -239,32 +267,36 @@ header .datacamp {
     left: 50%;
     transform: translate(-50%, 0%);
 }
+
 @media (min-width: 768px) and (max-width: 1199px) {
     #portfolio .card-img-overlay .card-title {
         font-size: 16px;
     }
-    
     #portfolio .card-img-overlay .card-text {
         font-size: 13px;
     }
 }
+
 @media (max-width: 767px) {
     #portfolio .card-img-overlay .card-title {
         font-size: 28px;
     }
-    
     #portfolio .card-img-overlay .card-text {
         font-size: 20px;
         margin-top: 10vh;
     }
 }
 
+
 /* end portfolio */
 
+
 /*  start contact*/
+
 .contact .text {
     font-size: 20px;
     line-height: 2.25;
 }
+
 
 /* end contact */
