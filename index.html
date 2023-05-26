@@ -12,6 +12,17 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,300;0,400;0,600;0,700;1,200;1,300&family=Barlow+Semi+Condensed:wght@600;700&family=Cairo:wght@400;500;600;700;800;900&family=DM+Serif+Display&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Sans+Pro:ital,wght@1,400;1,600;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--wow files-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!--css files-->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css.map" />
@@ -60,66 +71,65 @@
     <!-- end nav -->
     <!-- start header -->
     <header class="text-center">
-      <div id="particles-js"></div>
+      <!--<div id="particles-js"></div> animated bg -->
+      <div id="header-bg"></div>
       <div class="container text-holder">
-        <div class="title d-flex justify-content-center">
-          <h2 class="h1 mt-4 me-3">AHMED</h2>
-          <img class="img-fluid" src="pics/logo.png" alt="logo" />
-          <h2 class="h1 mt-4 ms-3">SHEHATA</h2>
-        </div>
-        <div class="line my-5"></div>
-
-        <div class="icons d-flex justify-content-center">
-          <div class="rounded-circle twitter me-2">
-            <a href="https://twitter.com/sr4shetos" target="_blank">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-          </div>
-          <div class="rounded-circle linkedin me-2">
-            <a href="https://www.linkedin.com/in/thedatanerd/" target="_blank">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-          </div>
-          <a
-            href="https://public.tableau.com/app/profile/ahmed.shehata.ali"
-            target="_blank"
-          >
-            <img
-              class="img-fluid me-3 tableau rounded-circle p-2"
-              src="pics/Tableau Software.svg"
-              alt="tableau-logo"
-            />
-          </a>
-        </div>
-        <p class="text pt-3 px-2">
-          Welcome to Ahmed Shehata Portfolio’s page. Business Intelligence
-          Analyst and a Data Storyteller with strong background in statistics
-          and 7-month remote experience. Certified as a Professional Data
-          Analyst by
-          <a
-            class="datacamp"
-            href="https://www.datacamp.com/certificate/DA0028106803070"
-            target="_blank"
-          >
+        <h2
+          class="mt-4 me-3 animate__animated animate__fadeInUp animate__delay-0.375s animate-duration-0.875s"
+        >
+          AHMED SHEHATA
+        </h2>
+        <p
+          class="mt-5 animate__animated animate__fadeInUp animate__delay-0.375s animate-duration-0.875s"
+        >
+          ANALYTICS <br />
+          ENGINEER
+        </p>
+        <!--icons  
+            <div class="icons d-flex justify-content-center">
+                <div class="rounded-circle twitter me-2">
+                    <a href="https://twitter.com/sr4shetos" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+                <div class="rounded-circle linkedin me-2">
+                    <a href="https://www.linkedin.com/in/thedatanerd/" target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <a href="https://public.tableau.com/app/profile/ahmed.shehata.ali" target="_blank">
+                    <img class="img-fluid me-3 tableau rounded-circle p-2" src="pics/Tableau Software.svg" alt="tableau-logo" />
+                </a>
+            </div>
+            <p class="text pt-3 px-2">
+                Welcome to Ahmed Shehata Portfolio’s page. Business Intelligence Analyst and a Data Storyteller with strong background in statistics and 7-month remote experience. Certified as a Professional Data Analyst by
+                <a class="datacamp" href="https://www.datacamp.com/certificate/DA0028106803070" target="_blank">
             DataCamp.
           </a>
-        </p>
-        <button type="button" class="btn btn-outline-success mt-2 me-3 btn-lg">
+            </p>
+            <button type="button" class="btn btn-outline-success mt-2 me-3 btn-lg">
           <a href="#intro">VISIT</a>
         </button>
-        <button type="button" class="btn btn-outline-success mt-2 btn-lg">
+            <button type="button" class="btn btn-outline-success mt-2 btn-lg">
           <a href="#contact">CONTACT</a>
         </button>
-        <div class="">
+                -->
+        <div
+          class="rounded-circle arrow-bg animate__animated animate__fadeInUp animate__delay-0.375s animate-duration-0.875s"
+        >
           <a href="#intro">
-            <i class="fa-solid fa-chevron-down arrow-down my-5"></i>
+            <img
+              class="arrow-down img-fluid"
+              src="pics/arrow-down.svg "
+              alt=""
+            />
           </a>
         </div>
       </div>
     </header>
     <!-- end header -->
     <!-- start intro -->
-    <div id="intro" class="text-center text-lg-start">
+    <div id="intro" class="text-center text-lg-start intro">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-3 align-self-center">
@@ -865,5 +875,9 @@
     <script src="js/all.min.js"></script>
     <script src="particles.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
