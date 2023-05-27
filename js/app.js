@@ -32,6 +32,31 @@ lis.forEach(function(e) {
         e.classList.add("active");
     })
 });
+
+//nav visible && hidden along scrolling
+var navbar = document.getElementById("navbar");
+var previousScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+window.addEventListener("scroll", function() {
+    var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > previousScroll) {
+        // Scrolling down
+        navbar.classList.add("hidden");
+    } else if (currentScroll < previousScroll) {
+        // Scrolling up
+        navbar.classList.remove("hidden");
+    }
+
+    if (currentScroll === 0) {
+        // At the top
+        navbar.classList.remove("hidden");
+    }
+
+    previousScroll = currentScroll;
+});
+
+
 //nav section activation
 
 

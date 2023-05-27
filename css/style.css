@@ -30,12 +30,22 @@ nav .navbar-nav li a:hover {
 }
 
 .active {
-    border-bottom: solid 2px #198754;
+    border-bottom: solid 2px #e74d61;
 }
 
 .active a {
     color: black !important;
     transition: 0ms;
+}
+
+.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.visible {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
 }
 
 
@@ -58,10 +68,10 @@ nav .navbar-nav li a:hover {
 
 #header-bg {
     width: 100%;
-    height: 800px;
+    height: 1000px;
     background-color: #ffffff;
     background-image: url(/pics/header-bg2.svg), linear-gradient( 45deg, rgba(0, 0, 0, 0.329) 22%, rgba(196, 123, 82, 0.541) 100%), url(/pics/header-bg.JPG);
-    background-size: cover, cover, 39rem;
+    background-size: cover, cover;
     background-position: center, 0% 0%, center;
     background-repeat: no-repeat, repeat, repeat-y;
 }
@@ -113,7 +123,7 @@ header .arrow-bg {
     width: 45px;
     height: 45px;
     background-color: #ffffff43;
-    margin-left: 50%;
+    margin: 0 auto;
 }
 
 header .arrow-down {
@@ -189,6 +199,15 @@ header .datacamp {
 }
 */
 
+@media (max-width: 575px) {
+    header .text-holder {
+        max-width: none;
+    }
+    header p {
+        font-size: 2.375em;
+    }
+}
+
 
 /*  end header*/
 
@@ -205,13 +224,6 @@ header .datacamp {
     font-size: 20px;
     line-height: 1.7;
     color: #000000;
-}
-
-@media (max-width: 575px) {
-    header .text-holder {
-        max-width: none;
-        padding: 0;
-    }
 }
 
 
