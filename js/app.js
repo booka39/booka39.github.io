@@ -58,8 +58,6 @@ window.addEventListener("scroll", function() {
 
 
 //nav section activation
-
-
 window.addEventListener('scroll', () => {
     console.log(window.scrollY);
 
@@ -259,10 +257,10 @@ document.querySelectorAll('.btns button').forEach(button => {
 
             if (buttonId == 'shaw-all') {
                 row.classList.remove('row-cols-2', 'justify-content-center');
-                row.classList.add('row-cols-1', 'row-cols-md-3', 'row-cols-lg-4');
+                row.classList.add('row-cols-1', 'row-cols-md-2');
             } else {
                 row.classList.add('row-cols-2', 'justify-content-center');
-                row.classList.remove('row-cols-1', 'row-cols-md-3', 'row-cols-lg-4');
+                row.classList.remove('row-cols-1', 'row-cols-md-2');
             }
         } else {
 

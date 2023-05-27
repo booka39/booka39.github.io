@@ -16,12 +16,43 @@ a {
     color: inherit;
 }
 
+.line-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.line-container .line {
+    border-bottom: 1px solid #e74d61;
+}
+
+.line1 {
+    width: 6%;
+}
+
+.line2 {
+    width: 12%;
+}
+
 
 /*  start nav*/
 
 nav {
     font-size: 17px;
-    background-color: #ffffff;
+    background-image: url(/pics/header-bg2.svg), linear-gradient( 45deg, rgb(255 255 255 / 0%) 22%, rgb(196 123 82 / 0%) 100%), url(/pics/nav-bg.jpg);
+    background-size: cover, cover;
+    background-position: center, 0% 0%, center;
+    background-repeat: no-repeat, repeat, repeat-y;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+nav .navbar-nav li a {
+    color: white !important;
+    transition: all ease-in .3s;
 }
 
 nav .navbar-nav li a:hover {
@@ -30,7 +61,7 @@ nav .navbar-nav li a:hover {
 }
 
 .active {
-    border-bottom: solid 2px #e74d61;
+    border-bottom: solid 2px #000000;
 }
 
 .active a {
@@ -233,16 +264,21 @@ header .datacamp {
 /*  start services*/
 
 #services {
-    background-color: #198754;
+    background-color: #F1F1F1;
 }
 
 #services .card {
-    background-color: #dff9ee;
+    background-color: #F1F1F1;
+    border: 0px;
 }
 
 #services .dashboard-hover {
     margin-top: -4px;
     margin-bottom: -4px;
+}
+
+#services .hvr-glow:hover {
+    background-color: white !important;
 }
 
 @media (max-width: 767px) {
@@ -311,22 +347,53 @@ header .datacamp {
     transform: translate(-50%, 0%);
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 1200px) {
     #portfolio .card-img-overlay .card-title {
-        font-size: 16px;
+        font-size: 30px;
+        margin-top: 2vh;
     }
     #portfolio .card-img-overlay .card-text {
-        font-size: 13px;
+        font-size: 25px;
+        margin-top: 15vh;
     }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 992px) and (max-width: 1199px) {
+    #portfolio .card-img-overlay .card-title {
+        font-size: 26px;
+    }
+    #portfolio .card-img-overlay .card-text {
+        font-size: 23px;
+        margin-top: 10vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #portfolio .card-img-overlay .card-title {
+        font-size: 22px;
+    }
+    #portfolio .card-img-overlay .card-text {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 492px) and (max-width: 767px) {
     #portfolio .card-img-overlay .card-title {
         font-size: 28px;
     }
     #portfolio .card-img-overlay .card-text {
         font-size: 20px;
         margin-top: 10vh;
+    }
+}
+
+@media (max-width: 492px) {
+    #portfolio .card-img-overlay .card-title {
+        font-size: 23px;
+    }
+    #portfolio .card-img-overlay .card-text {
+        font-size: 17px;
+        margin-top: 6vh;
     }
 }
 
