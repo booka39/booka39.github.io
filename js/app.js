@@ -32,6 +32,21 @@ lis.forEach(function(e) {
         e.classList.add("active");
     })
 });
+//nav background
+window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop === 0) {
+        navbar.classList.add('transparent-bg');
+    } else {
+        navbar.classList.remove('transparent-bg');
+    }
+});
+
+
+
+
 
 //nav visible && hidden along scrolling
 var navbar = document.getElementById("navbar");

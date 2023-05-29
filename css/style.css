@@ -28,11 +28,11 @@ a {
 }
 
 .line1 {
-    width: 6%;
+    width: 75px;
 }
 
 .line2 {
-    width: 12%;
+    width: 160px;
 }
 
 
@@ -40,10 +40,39 @@ a {
 
 nav {
     font-size: 17px;
-    background-image: url(/pics/header-bg2.svg), linear-gradient( 45deg, rgb(255 255 255 / 0%) 22%, rgb(196 123 82 / 0%) 100%), url(/pics/nav-bg.jpg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url(/pics/header-bg2.svg), linear-gradient(45deg, rgb(255 255 255 / 0%) 22%, rgb(196 123 82 / 0%) 100%), url(/pics/nav-bg.jpg);
     background-size: cover, cover;
     background-position: center, 0% 0%, center;
     background-repeat: no-repeat, repeat, repeat-y;
+    transition: opacity 0.3s ease;
+}
+
+nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/pics/header-bg2.svg), linear-gradient(45deg, rgb(255 255 255 / 0%) 22%, rgb(196 123 82 / 0%) 100%), url(/pics/nav-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+nav.transparent-bg {
+    background-image: none;
+}
+
+nav.transparent-bg::before {
+    opacity: 0;
 }
 
 .navbar-brand {
@@ -298,7 +327,7 @@ header .datacamp {
 }
 
 #portfolio .active-btn {
-    background-color: #1d8754;
+    background-color: #dc3545;
     color: white;
 }
 
