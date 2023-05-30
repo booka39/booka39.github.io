@@ -302,7 +302,7 @@ header .datacamp {
 
 @media (max-width: 767px) {
   #services .card img {
-    margin: 0px auto !important;
+    margin: 0px 40% !important;
   }
   #services .col {
     max-width: 300px;
