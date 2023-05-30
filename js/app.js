@@ -294,10 +294,19 @@ document.querySelectorAll('.btns button').forEach(button => {
 
         // Iterate over each project and toggle their visibility based on the button clicked
         projects.forEach(project => {
+            const projectDisplay = getComputedStyle(project).display;
+
             if (buttonId === 'show-all') {
                 project.style.display = 'block'; // Show all projects
             } else if (project.classList.contains(buttonId)) {
-                project.style.display = 'block'; // Show the projects with matching class
+                if (projectDisplay === 'none') {
+                    project.style.display = 'block'; // Show the projects with matching class
+                } else {
+                    project.style.display = 'none'; // Hide the projects with matching class
+                    setTimeout(() => {
+                        project.style.display = 'block'; // Show the projects with matching class
+                    }, 0);
+                }
             } else {
                 project.style.display = 'none'; // Hide the projects without matching class
             }
