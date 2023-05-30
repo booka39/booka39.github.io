@@ -296,18 +296,17 @@ header .datacamp {
   border: 0px;
 }
 
-#services .dashboard-hover {
-  margin-top: -4px;
-  margin-bottom: -4px;
-}
-
 #services .hvr-glow:hover {
   background-color: white !important;
 }
 
 @media (max-width: 767px) {
   #services .card img {
-    margin-left: 40% !important;
+    margin: 0px auto !important;
+  }
+  #services .col {
+    max-width: 300px;
+    margin: 5px auto;
   }
 }
 
