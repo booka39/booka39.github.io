@@ -369,10 +369,6 @@ header .datacamp {
   transform: translate(-50%, 0%);
 }
 
-#portfolio .animate__fadeIn {
-  animation-duration: 0.5s;
-}
-
 @media (min-width: 1200px) {
   #portfolio .card-img-overlay .card-title {
     font-size: 30px;
