@@ -74,33 +74,33 @@ window.addEventListener("scroll", function() {
 
 
 //nav section activation
-window.addEventListener('scroll', () => {
-    console.log(window.scrollY);
+// Get all the <li> elements inside the navbar
+const navbarItems = document.querySelectorAll('.navbar-nav li');
 
-    const lis = document.querySelectorAll('nav ul li');
+// Function to handle scroll event
+const handleScroll = () => {
+    const scrollPosition = window.scrollY;
 
-    if (window.scrollY <= 1005) {
-        lis[0].classList.add('active');
-        lis[1].classList.remove('active');
-        lis[2].classList.remove('active');
-        lis[3].classList.remove('active');
-    } else if (window.scrollY > 1005 && window.scrollY <= 1633) {
-        lis[1].classList.add('active');
-        lis[0].classList.remove('active');
-        lis[2].classList.remove('active');
-        lis[3].classList.remove('active');
-    } else if (window.scrollY > 1633 && window.scrollY <= 2116) {
-        lis[2].classList.add('active');
-        lis[0].classList.remove('active');
-        lis[1].classList.remove('active');
-        lis[3].classList.remove('active');
-    } else {
-        lis[3].classList.add('active');
-        lis[0].classList.remove('active');
-        lis[1].classList.remove('active');
-        lis[2].classList.remove('active');
-    }
-});
+    // Iterate over each <li> element
+    navbarItems.forEach((item) => {
+        const href = item.querySelector('a').getAttribute('href');
+        const section = document.querySelector(href);
+
+        // Check if the section is visible in the viewport
+        if (
+            section.offsetTop < scrollPosition &&
+            section.offsetTop + section.offsetHeight > scrollPosition
+        ) {
+            item.classList.add('active'); // Add the "active" class to the corresponding <li>
+        } else {
+            item.classList.remove('active'); // Remove the "active" class from other <li> elements
+        }
+    });
+};
+
+// Add event listener for scroll
+window.addEventListener('scroll', handleScroll);
+
 
 //background animated
 
