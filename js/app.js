@@ -102,7 +102,7 @@ const handleScroll = () => {
 
             // Check if the section is visible in the viewport with an additional offset of 20 pixels
             if (
-                section.offsetTop - 60 < scrollPosition &&
+                section.offsetTop - 150 < scrollPosition &&
                 section.offsetTop + section.offsetHeight > scrollPosition
             ) {
                 // Remove the "active" class from other <li> elements
