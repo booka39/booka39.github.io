@@ -80,23 +80,48 @@ const navbarItems = document.querySelectorAll('.navbar-nav li');
 // Function to handle scroll event
 const handleScroll = () => {
     const scrollPosition = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
 
-    // Iterate over each <li> element
-    navbarItems.forEach((item) => {
-        const href = item.querySelector('a').getAttribute('href');
-        const section = document.querySelector(href);
+    // Check if the scroll position is 150 pixels from the bottom of the page
+    if (scrollPosition + windowHeight >= scrollHeight - 150) {
+        // Iterate over each <li> element
+        navbarItems.forEach((item) => {
+            const href = item.querySelector('a').getAttribute('href');
+            if (href === '#contact') {
+                item.classList.add('active'); // Add the "active" class to the last <li> with href="#contact"
+            } else {
+                item.classList.remove('active'); // Remove the "active" class from other <li> elements
+            }
+        });
+    } else {
+        // Iterate over each <li> element
+        navbarItems.forEach((item) => {
+            const href = item.querySelector('a').getAttribute('href');
+            const section = document.querySelector(href);
 
-        // Check if the section is visible in the viewport
-        if (
-            section.offsetTop < scrollPosition &&
-            section.offsetTop + section.offsetHeight > scrollPosition
-        ) {
-            item.classList.add('active'); // Add the "active" class to the corresponding <li>
-        } else {
-            item.classList.remove('active'); // Remove the "active" class from other <li> elements
-        }
-    });
+            // Check if the section is visible in the viewport with an additional offset of 20 pixels
+            if (
+                section.offsetTop - 60 < scrollPosition &&
+                section.offsetTop + section.offsetHeight > scrollPosition
+            ) {
+                // Remove the "active" class from other <li> elements
+                navbarItems.forEach((otherItem) => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                item.classList.add('active'); // Add the "active" class to the corresponding <li>
+            } else {
+                item.classList.remove('active'); // Remove the "active" class from other <li> elements
+            }
+        });
+    }
 };
+
+
+
 
 // Add event listener for scroll
 window.addEventListener('scroll', handleScroll);
