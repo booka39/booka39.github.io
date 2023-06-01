@@ -1,7 +1,7 @@
 /*  general styles */
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "sans-serif";
 }
 
 a {
@@ -33,6 +33,11 @@ a {
 
 .line2 {
   width: 160px;
+}
+
+h2 {
+  font-family: "Poppins", "sans-seri" !important;
+  font-weight: 700 !important;
 }
 
 /*  start nav*/
@@ -145,7 +150,7 @@ header {
   color: black;
   position: relative;
   overflow: hidden;
-  font-family: "Bai Jamjuree";
+  font-family: "Bai Jamjuree", "sans-serif";
 }
 
 header .title img {
@@ -162,7 +167,7 @@ header .text-holder {
   padding: 2em 3em;
 }
 
-header h2 {
+header .h2 {
   color: white;
   letter-spacing: 0.4rem;
   width: calc(100% + 0.4rem);
@@ -190,60 +195,6 @@ header .arrow-bg {
 header .arrow-down {
   transform: scale(0.5);
 }
-
-/*
-header .icons .twitter,
-header .icons .linkedin {
-    color: white;
-    font-size: 30px;
-    width: 40px;
-    height: 40px;
-    background-color: black;
-}
-
-header .icons .twitter:hover {
-    background-color: #1da1f2;
-}
-
-header .icons .linkedin:hover {
-    background-color: #0072b1;
-    border: #0072b1 solid 2px;
-}
-
-header .icons .linkedin:hover {
-    background-color: #0072b1;
-    border: #0072b1 solid 2px;
-}
-
-header .icons .tableau:hover {
-    background-color: #21467f;
-    border: #21467f solid 2px;
-}
-
-header .icons .twitter:hover,
-header .icons .linkedin:hover,
-header .icons .tableau:hover {
-    cursor: pointer;
-    transition: all ease-in 0.25s;
-}
-
-header .icons .linkedin {
-    font-size: 25px;
-    background-color: black;
-    border: black solid 2px;
-}
-
-header .icons .tableau {
-    max-width: 42px;
-    margin-bottom: 27px;
-    background-color: black;
-    border: black solid 2px;
-}
-
-header .text {
-    font-size: 20px;
-}
-*/
 
 header .arrow-down:hover {
   cursor: pointer;
@@ -384,8 +335,8 @@ header .datacamp {
     font-size: 26px;
   }
   #portfolio .card-img-overlay .card-text {
-    font-size: 23px;
-    margin-top: 10vh;
+    font-size: 21px;
+    margin-top: 9vh;
   }
 }
 
@@ -395,6 +346,12 @@ header .datacamp {
   }
   #portfolio .card-img-overlay .card-text {
     font-size: 18px;
+  }
+  #portfolio .travel-card .card-title {
+    font-size: 20px;
+  }
+  #portfolio .travel-card .card-text {
+    font-size: 15px;
   }
 }
 
@@ -416,15 +373,228 @@ header .datacamp {
     font-size: 17px;
     margin-top: 6vh;
   }
+  #portfolio .travel-card .card-title {
+    font-size: 20px;
+  }
+  #portfolio .travel-card .card-text {
+    font-size: 15px;
+  }
 }
 
 /* end portfolio */
 
 /*  start contact*/
 
+.contact {
+  background-color: #111111;
+}
+
 .contact .text {
-  font-size: 20px;
-  line-height: 2.25;
+  color: white;
+  font-size: 16px;
+}
+
+.contact h2 {
+  color: #e74d61;
+}
+
+.contact .title-bg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-48%);
+}
+
+.contact .title-bg span {
+  font-size: 73px;
+  letter-spacing: 10px;
+  line-height: 0.7;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.07);
+}
+
+.contact h2 {
+  position: relative;
+  top: 1px;
+}
+
+.contact img {
+  max-width: 15%;
+}
+
+.contact p {
+  color: rgb(182, 182, 182);
+  margin: 0;
+}
+
+.contact a {
+  color: white;
+}
+
+.contact .icons .twitter,
+.contact .icons .linkedin {
+  color: white;
+  font-size: 29px;
+  width: 40px;
+  height: 40px;
+  background-color: #2b2a2a;
+}
+
+.contact .icons .twitter:hover {
+  background-color: #1da1f2;
+}
+
+.contact .icons .linkedin:hover {
+  background-color: #0072b1;
+  border: #0072b1 solid 2px;
+}
+
+.contact .icons .linkedin:hover {
+  background-color: #0072b1;
+  border: #0072b1 solid 2px;
+}
+
+.contact .icons .tableau:hover {
+  background-color: #21467f;
+  border: #21467f solid 2px;
+}
+
+.contact .icons .twitter:hover,
+.contact .icons .linkedin:hover,
+.contact .icons .tableau:hover {
+  cursor: pointer;
+  transition: all ease-in 0.25s;
+}
+
+.contact .icons .linkedin {
+  font-size: 25px;
+  background-color: #2b2a2a;
+  border: #2b2a2a solid 2px;
+}
+
+.contact .icons .tableau {
+  max-width: 42px;
+  margin-bottom: 27px;
+  background-color: #2b2a2a;
+  border: #2b2a2a solid 2px;
+}
+
+.contact .contactform input[type="text"],
+.contact .contactform input[type="email"] {
+  border: 1px solid #111;
+  width: 100%;
+  background: #252525;
+  color: #fff;
+  padding: 11px 26px;
+  margin-bottom: 29;
+  border-radius: 30px;
+  outline: none !important;
+  transition: 0.3s;
+}
+
+.contact .contactform textarea {
+  border: 1px solid #111;
+  background: #252525;
+  color: #fff;
+  width: 100%;
+  padding: 12px 26px;
+  margin-bottom: 20px;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 30px;
+  outline: none !important;
+  transition: 0.3s;
+}
+
+.button:before,
+.button-icon {
+  background-color: #e74d61;
+}
+
+.button:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: 0.3s ease-out all;
+}
+
+.contact .button {
+  border: 1px solid #e74d61;
+  overflow: hidden;
+  display: inline-block;
+  line-height: 1.4;
+  border-radius: 35px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+  user-select: none;
+  transition: 250ms all;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  position: relative;
+  z-index: 1;
+  padding: 16px 70px 16px 35px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background-color: transparent;
+  outline: none !important;
+}
+
+.contact .contactform input[type="text"]:focus,
+.contact .contactform input[type="email"]:focus,
+.contact .contactform textarea:focus,
+body.light.contact .contactform input[type="text"]:focus,
+body.light.contact .contactform input[type="email"]:focus,
+body.light.contact .contactform textarea:focus,
+.blog .page-item.active .page-link,
+.blog .page-link:hover,
+.button {
+  border: 1px solid #e74d61;
+}
+
+.contact .button:hover {
+  background-color: #e74d61;
+}
+
+.button .button-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  transition: 0.3s ease-out all;
+}
+
+.button-icon {
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  bottom: 0;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.contact .contactform .form-message {
+  margin: 24px 0;
+}
+
+.contact .contactform .output_message {
+  display: block;
+  color: #fff;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 30px;
 }
 
 /* end contact */
