@@ -25,7 +25,7 @@ app.use(
 const oauth2Client = new google.auth.OAuth2(
     '470386140001-l441pt0g2s3ndjrn1s8i67cmlm5f6cno.apps.googleusercontent.com',
     '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',
-    'http://localhost:3000/auth/google/callback'
+    'https://ahmed-shehata.netlify.app/auth/google/callback'
 );
 
 // Define the scopes for accessing Gmail API
@@ -52,7 +52,7 @@ app.get('/auth/google/callback', async(req, res) => {
         const accessToken = tokens.access_token;
 
         // Redirect the user back to the home page with the access token
-        res.redirect(`http://localhost:3000/?accessToken=${accessToken}`);
+        res.redirect(`https://ahmed-shehata.netlify.app/?accessToken=${accessToken}`);
     } catch (error) {
         console.error('Error exchanging authorization code for tokens:', error);
         res.sendStatus(500);

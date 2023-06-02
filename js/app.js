@@ -367,121 +367,28 @@ projects.forEach(project => {
 /*  AJAX CONTACT FORM
         /* ----------------------------------------------------------- */
 
-// Assuming you're using jQuery for simplicity
 $(document).ready(function() {
-    $('.contactform').submit(function(e) {
-        e.preventDefault(); // Prevent the form from submitting normally
+    $('#contactForm').submit(function(e) {
+        e.preventDefault(); // Prevent form submission
 
-        var name = $('input[name="name"]').val();
-        var email = $('input[name="email"]').val();
-        var message = $('textarea[name="message"]').val();
+        // Get the form data
+        var formData = $(this).serialize();
 
+        // Send an AJAX request to the server
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:3000/sendEmail', // Replace with your server endpoint
-            data: { name: name, email: email, message: message },
+            url: '/send-email',
+            data: formData,
             success: function(response) {
-                $('.output_message').text(response.message);
-                $('.output_message').removeClass('error');
-                $('.output_message').addClass('success');
+                // Handle the success response
+                console.log('Email sent successfully!');
+                // You can display a success message or redirect the user to a thank you page
             },
-            error: function(response) {
-                $('.output_message').text(response.message);
-                $('.output_message').removeClass('success');
-                $('.output_message').addClass('error');
+            error: function(xhr, status, error) {
+                // Handle the error response
+                console.error('Error sending email:', error);
+                // You can display an error message to the user
             }
         });
     });
-});
-
-// Handle the button click event
-document.getElementById('sendBtn').addEventListener('click', () => {
-    // Send a POST request to the server when the button is clicked
-    fetch('http://localhost:3000/login', { // Replace with your server endpoint
-            method: 'POST',
-        })
-        .then((response) => response.text())
-        .then((data) => {
-            console.log(data); // Display the response from the server
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
-});
-
-// Attach an event listener to the form submit event
-document.getElementById('messageForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
-
-    // Retrieve the form input values
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-
-    // Create an AJAX request to send the form data to the server
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost:3000/sendEmail'); // Replace with your server endpoint
-    xhr.setRequestHeader('Content-Type', 'application/json');
-
-    // Convert the form data to JSON format
-    var data = JSON.stringify({ name: name, email: email, message: message });
-
-    // Send the AJAX request with the form data
-    xhr.send(data);
-
-    // Handle the response from the server
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            alert('Email sent successfully!');
-        } else {
-            alert('Error occurred while sending the email.');
-        }
-    };
-});
-
-// Get a reference to the "Send Message" button
-const sendBtn = document.getElementById('sendBtn');
-
-// Add an event listener to the button
-sendBtn.addEventListener('click', async() => {
-    // Get the user input from the form fields
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    // Get the access token from the query parameters
-    const params = new URLSearchParams(window.location.search);
-    const accessToken = params.get('accessToken');
-
-    // Create an object with the data to be sent in the request body
-    const data = {
-        name: name,
-        email: email,
-        message: message,
-        accessToken: accessToken,
-    };
-
-    try {
-        // Send an HTTP POST request to the server
-        const response = await fetch('http://localhost:3000/sendEmail', { // Replace with your server endpoint
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        });
-
-        if (response.ok) {
-            // Email sent successfully
-            console.log('Email sent successfully');
-            // You can display a success message or perform any other actions here
-        } else {
-            // Error occurred while sending the email
-            console.error('Error occurred while sending the email');
-            // You can display an error message or perform any other error handling here
-        }
-    } catch (error) {
-        console.error('Error occurred:', error);
-        // You can display an error message or perform any other error handling here
-    }
 });
