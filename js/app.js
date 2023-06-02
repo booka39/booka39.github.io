@@ -370,21 +370,30 @@ projects.forEach(project => {
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent the form from submitting
 
-    // Get input values
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var message = document.getElementById("message").value;
 
-    // Create an AJAX request
+    // Create the data object to send in the request body
+    var data = {
+        name: name,
+        email: email,
+        message: message
+    };
+
+    // Create a new AJAX request
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "send-email.php", true);
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.open("POST", "/send-email", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+
     xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        if (xhr.readyState === 4 && xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);
             var outputMessage = document.querySelector(".output_message");
             outputMessage.textContent = response.message;
         }
     };
-    xhr.send("name=" + encodeURIComponent(name) + "&email=" + encodeURIComponent(email) + "&message=" + encodeURIComponent(message));
+
+    // Convert the data object to JSON and send the request
+    xhr.send(JSON.stringify(data));
 });

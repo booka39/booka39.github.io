@@ -9,5 +9,23 @@
     "nodemailer": "^6.9.3",
     "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "shetos-site1",
+  "version": "1.0.0",
+  "main": "particles.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/booka39/shetos-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/booka39/shetos-site/issues"
+  },
+  "homepage": "https://github.com/booka39/shetos-site#readme",
+  "description": ""
 }
