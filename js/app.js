@@ -367,28 +367,24 @@ projects.forEach(project => {
 /*  AJAX CONTACT FORM
         /* ----------------------------------------------------------- */
 
-$(document).ready(function() {
-    $('#contactForm').submit(function(e) {
-        e.preventDefault(); // Prevent form submission
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting
 
-        // Get the form data
-        var formData = $(this).serialize();
+    // Get input values
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
 
-        // Send an AJAX request to the server
-        $.ajax({
-            type: 'POST',
-            url: '/send-email',
-            data: formData,
-            success: function(response) {
-                // Handle the success response
-                console.log('Email sent successfully!');
-                // You can display a success message or redirect the user to a thank you page
-            },
-            error: function(xhr, status, error) {
-                // Handle the error response
-                console.error('Error sending email:', error);
-                // You can display an error message to the user
-            }
-        });
-    });
+    // Create an AJAX request
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "send-email.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            var outputMessage = document.querySelector(".output_message");
+            outputMessage.textContent = response.message;
+        }
+    };
+    xhr.send("name=" + encodeURIComponent(name) + "&email=" + encodeURIComponent(email) + "&message=" + encodeURIComponent(message));
 });
