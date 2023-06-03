@@ -376,7 +376,7 @@ document.getElementById("sendBtn").addEventListener("click", function(event) {
     console.log(body);
     Email.send({
         SecureToken: "0ce86975-736e-4f35-8252-58570a20b751",
-        To: 'mohamedaboukaram39@gmail.com',
+        To: 'ahmed.shehata.360@gmail.com',
         From: email,
         Subject: "This is the subject",
         Body: body
