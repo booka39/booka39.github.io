@@ -367,33 +367,47 @@ projects.forEach(project => {
 /*  AJAX CONTACT FORM
         /* ----------------------------------------------------------- */
 
-document.getElementById("contactForm").addEventListener("submit", function(event) {
+document.getElementById("sendBtn").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent the form from submitting
-
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
-
-    // Create the data object to send in the request body
-    var data = {
-        name: name,
-        email: email,
-        message: message
-    };
-
-    // Create a new AJAX request
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/send-email", true);
-    xhr.setRequestHeader("Content-Type", "application/json");
-
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
-            var outputMessage = document.querySelector(".output_message");
-            outputMessage.textContent = response.message;
-        }
-    };
-
-    // Convert the data object to JSON and send the request
-    xhr.send(JSON.stringify(data));
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+    let body = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
+    Email.send({
+        SecureToken: "0ce86975-736e-4f35-8252-58570a20b751",
+        To: 'ahmed.shehata.360@gmail.com',
+        From: email,
+        Subject: "This is the subject",
+        Body: body
+    }).then(
+        message => alert(message)
+    );
 });
+
+//    var name = document.getElementById("name").value;
+//    var email = document.getElementById("email").value;
+//    var message = document.getElementById("message").value;
+
+//    // Create the data object to send in the request body
+//    var data = {
+//        name: name,
+//        email: email,
+//        message: message
+//    };
+
+//    // Create a new AJAX request
+//    var xhr = new XMLHttpRequest();
+//    xhr.open("POST", "/send-email", true);
+//    xhr.setRequestHeader("Content-Type", "application/json");
+
+//    xhr.onreadystatechange = function() {
+//        if (xhr.readyState === 4 && xhr.status === 200) {
+//            var response = JSON.parse(xhr.responseText);
+//            var outputMessage = document.querySelector(".output_message");
+//            outputMessage.textContent = response.message;
+//        }
+//    };
+
+//    // Convert the data object to JSON and send the request
+//    xhr.send(JSON.stringify(data));
+//});
