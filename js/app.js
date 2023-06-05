@@ -86,10 +86,10 @@ const handleScroll = () => {
 
     // Check if the scroll position is within the header section
     if (scrollPosition >= header.offsetTop && scrollPosition < header.offsetTop + header.offsetHeight) {
-        // Set the active state for the li element with href="#intro"
+        // Set the active state for the li element with href="#about-me"
         navbarItems.forEach((item) => {
             const href = item.querySelector('a').getAttribute('href');
-            if (href === '#intro') {
+            if (href === '#about-me') {
                 item.classList.add('active');
             } else {
                 item.classList.remove('active');
@@ -364,6 +364,9 @@ projects.forEach(project => {
     }
 });
 
+
+//let's work together
+
 /*  AJAX CONTACT FORM
         /* ----------------------------------------------------------- */
 
@@ -375,15 +378,23 @@ document.getElementById("sendBtn").addEventListener("click", function(event) {
     let body = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
     console.log(body);
     Email.send({
-        SecureToken: "0ce86975-736e-4f35-8252-58570a20b751",
+        Host: "smtp.gmail.com",
+        Username: "mohamedaboukaram39@gmail.com",
+        Password: "cmvuljuuqdczysyn",
         To: 'ahmed.shehata.360@gmail.com',
         From: email,
         Subject: "This is the subject",
         Body: body
+            //SecureToken: "0ce86975-736e-4f35-8252-58570a20b751",
+            //To: 'ahmed.shehata.360@gmail.com',
+            //From: email, // Change the From email address here
+            //Subject: "This is the subject",
+            //Body: body
     }).then(
         message => alert(message)
     );
 });
+
 
 //    var name = document.getElementById("name").value;
 //    var email = document.getElementById("email").value;

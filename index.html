@@ -64,7 +64,7 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item me-4">
-              <a class="nav-link" href="#intro">INTRO</a>
+              <a class="nav-link" href="#about-me">ABOUT ME</a>
             </li>
             <li class="nav-item me-4">
               <a class="nav-link" href="#services">SERVICES</a>
@@ -106,7 +106,7 @@
           </a>
             </p>
             <button type="button" class="btn btn-outline-success mt-2 me-3 btn-lg">
-          <a href="#intro">VISIT</a>
+          <a href="#about-me">VISIT</a>
         </button>
             <button type="button" class="btn btn-outline-success mt-2 btn-lg">
           <a href="#contact">CONTACT</a>
@@ -118,7 +118,7 @@
           <div
             class="animate__animated animate__bounce animate__infinite infinite arrow-bg rounded-circle animate__slow"
           >
-            <a href="#intro">
+            <a href="#about-me">
               <img
                 class="arrow-down img-fluid"
                 src="pics/arrow-down.svg "
@@ -130,14 +130,44 @@
       </div>
     </header>
     <!-- end header -->
-    <!-- start intro -->
-    <div id="intro" class="text-center text-lg-start intro">
+    <!-- start about-me -->
+    <div id="about-me" class="text-center text-lg-start about-me py-5">
       <div class="container">
+        <div class="d-flex flex-column about-me-holder pb-3">
+          <h2 class="h1 text-center">
+            ABOUT <span style="color: #e74d61">ME</span>
+          </h2>
+          <div class="line-holder d-flex justify-content-center">
+            <hr class="about-me-line" />
+            <i class="fa-solid fa-address-card px-3" style="color: #e74d61"></i>
+            <hr class="about-me-line" />
+          </div>
+        </div>
         <div class="row">
           <div class="col-12 col-lg-3 align-self-center">
-            <img class="img-fluid" src="pics/shetos.jpg" alt="profile-pic" />
+            <div class="about-me-photo-holder">
+              <div class="bio d-none d-lg-block">
+                <p>Name</p>
+                <p class="pb-2">Ahmed Shehata</p>
+                <p class="pt-2">Birthday</p>
+                <p class="pb-2">24</p>
+                <p class="pt-2">Mail</p>
+                <p class="pb-2">ahmed.shehata.360@gmail.com</p>
+                <p class="pt-2">Phone</p>
+                <p class="pb-2">+201113229737</p>
+                <p class="pt-2">Adress</p>
+                <p class="pb-2">Cairo, Egypt /Dubai, UAE</p>
+                <p class="pt-2">Languages</p>
+                <p class="pb-2">Arabic, English</p>
+              </div>
+              <img
+                class="img-fluid about-me-photo"
+                src="pics/shetos.jpg"
+                alt="profile-pic"
+              />
+            </div>
           </div>
-          <div class="col-12 col-lg-9 px-2 align-self-center">
+          <div class="col-12 offset-lg-3 col-lg-6 px-2 align-self-center">
             <p class="text mt-4">
               Hi, I'm Ahmed. <br />
               I have honed my expertise in developing business intelligence
@@ -147,11 +177,42 @@
               My goal is to provide critical insights that drive business growth
               and success.
             </p>
+
+            <button type="button" id="view-cv" class="btn m-3 view-cv px-4">
+              <a
+                href="https://drive.google.com/file/d/1oGcHj8OxaJp7gOGS6Qg7pyf2_byUv3Tm/view?usp=drivesdk"
+                target="_blank"
+                >VIEW CV</a
+              >
+            </button>
+            <button type="button" id="hire-me" class="btn m-3 hire-me">
+              <a href="#contact">HIRE ME</a>
+              <i
+                class="fa-solid fa-arrow-right-long ps-3"
+                style="color: #ffffff"
+              ></i>
+            </button>
+          </div>
+          <div class="col bio-mobile d-block d-lg-none pt-3">
+            <div class="bio-mobile-text p-3">
+              <p>Name</p>
+              <p class="pb-2">Ahmed Shehata</p>
+              <p class="pt-2">Birthday</p>
+              <p class="pb-2">24</p>
+              <p class="pt-2">Mail</p>
+              <p class="pb-2">ahmed.shehata.360@gmail.com</p>
+              <p class="pt-2">Phone</p>
+              <p class="pb-2">+201113229737</p>
+              <p class="pt-2">Adress</p>
+              <p class="pb-2">Cairo, Egypt /Dubai, UAE</p>
+              <p class="pt-2">Languages</p>
+              <p class="pb-2">Arabic, English</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- end intro -->
+    <!-- end about-me -->
     <!-- start services -->
     <div id="services" class="py-5">
       <div class="container">
@@ -1063,18 +1124,23 @@
     <!-- start contact -->
     <div id="contact" class="pt-5 pb-2 contact">
       <div class="container">
+        <div class="contact-title py-3">
+          <h2 class="first transition">Let's</h2>
+          <h2 class="sec transition">Work Together</h2>
+        </div>
+
         <div class="title-bg">
           <span class="text-center">CONTACT</span>
         </div>
-        <h2 class="h1 text-center">GET IN TOUCH</h2>
+        <h2 class="h1 text-center">
+          <span style="color: white"> GET </span> IN TOUCH
+        </h2>
         <div class="row pt-4">
           <div class="col col-md-4">
             <p class="text text-md-start pb-4">
-              I'm always open to discussing new full-time / part-time
-              opportunities or freelancing projects,So If you have any question,
-              please don't hesitate to get in touch! Feel free to send me Mail,
-              or connect with me on LinkedIn.You can also send direct Whatsapp
-              Message, I look forward to hearing from you!
+              I'm always open to discussing new full-time / part-time or
+              freelancing opportunities, Got questions, concerns or feedback?
+              Feel free to say Hi!
             </p>
             <div class="mail-me d-flex mb-3">
               <img
@@ -1083,7 +1149,7 @@
                 alt="mail-icon"
               />
               <div class="ps-3">
-                <p class="pt-2">MAIL ME</p>
+                <p class="pt-2">MAIL</p>
                 <p>
                   <a href="mailto:Ahmed.shehata.360@gmail.com" target="_blank"
                     >ahmed.shehata.360@gmail.com</a
@@ -1098,7 +1164,7 @@
                 alt="whatsapp-icon"
               />
               <div class="ps-3">
-                <p class="pt-2">WHATSAPP ME</p>
+                <p class="pt-2">WHATSAPP</p>
                 <p>
                   <a href="https://wa.me/+201113229737" target="_blank"
                     >+201113229737</a
@@ -1135,7 +1201,7 @@
             </div>
           </div>
           <!--form-->
-          <div class="col col-md-8">
+          <div class="col col-md-7 offset-md-1">
             <form class="contactform" id="contactForm" method="POST">
               <div class="contactform">
                 <div class="row">
@@ -1145,6 +1211,7 @@
                       type="text"
                       name="name"
                       placeholder="YOUR NAME"
+                      required
                     />
                   </div>
                   <div class="col-12 col-md-6">
@@ -1153,6 +1220,7 @@
                       type="email"
                       name="email"
                       placeholder="YOUR EMAIL"
+                      required
                     />
                   </div>
                   <div class="col-12 mt-4">
@@ -1162,6 +1230,7 @@
                       placeholder="YOUR MESSAGE"
                       data-gramm="false"
                       wt-ignore-input="true"
+                      required
                     ></textarea>
                     <button
                       type="submit"
