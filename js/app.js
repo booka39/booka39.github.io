@@ -186,23 +186,27 @@ var scrollCounter = 0;
 var originalTranslateXFirst = 0;
 var originalTranslateXSec = 0;
 
+// Set the maximum translation values for 'first' and 'sec'
+var maxTranslateXFirst = -36;
+var maxTranslateXSec = 12;
+
 // Add an event listener to the window scroll event
 window.addEventListener('scroll', function() {
     // Get the current scrolling Y position
     var scrollY = window.scrollY || window.pageYOffset;
 
-    // Get the top offset of the contact div 
+    // Get the top offset of the contact div minus 100 pixels
     var contactTop = contactDiv.offsetTop - 100;
 
     // Check if the scrolling Y position is at least 100 pixels above the contact div
-    if (scrollY >= contactTop && window.innerWidth >= 576) {
+    if (scrollY >= contactTop) {
         // Check if scrolling down
         if (scrollY > prevScrollY) {
             scrollCounter++;
 
             // Calculate the translation values based on the scroll position
-            var translateXFirst = -3 * scrollCounter;
-            var translateXSec = scrollCounter;
+            var translateXFirst = Math.min(-3 * scrollCounter, maxTranslateXFirst);
+            var translateXSec = Math.min(scrollCounter, maxTranslateXSec);
 
             // Apply the calculated translations to the "first" and "sec" classes
             contactTitle.querySelector('.first').style.transform = `translateX(${translateXFirst}px)`;
@@ -218,8 +222,8 @@ window.addEventListener('scroll', function() {
                 scrollCounter--;
 
                 // Calculate the translation values based on the scroll position
-                var translateXFirst = -3 * scrollCounter;
-                var translateXSec = scrollCounter;
+                var translateXFirst = Math.min(-3 * scrollCounter, maxTranslateXFirst);
+                var translateXSec = Math.min(scrollCounter, maxTranslateXSec);
 
                 // Apply the calculated translations to the "first" and "sec" classes
                 contactTitle.querySelector('.first').style.transform = `translateX(${translateXFirst}px)`;
@@ -229,7 +233,7 @@ window.addEventListener('scroll', function() {
             }
         }
     } else {
-        // The scrolling Y position is not at least 100 pixels above the contact div or window width is less than 720px
+        // The scrolling Y position is not at least 100 pixels above the contact div
         contactTitle.querySelector('.first').style.transform = 'translateX(0)';
         contactTitle.querySelector('.sec').style.transform = 'translateX(0)';
         console.log('Out');
@@ -240,19 +244,6 @@ window.addEventListener('scroll', function() {
 
     // Update the previous scrolling Y position
     prevScrollY = scrollY;
-});
-
-// Add an event listener to the window resize event
-window.addEventListener('resize', function() {
-    // Check if the window width is less than 720px
-    if (window.innerWidth < 576) {
-        // Reset the scroll counter to 0
-        scrollCounter = 0;
-
-        // Reset the translations to 0
-        contactTitle.querySelector('.first').style.transform = 'translateX(0)';
-        contactTitle.querySelector('.sec').style.transform = 'translateX(0)';
-    }
 });
 
 

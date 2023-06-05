@@ -306,7 +306,7 @@ header .datacamp {
     color: #ffffff;
 }
 
-@media (min-width: 1200px) {
+@media (min-width:1610px) {
     .about-me .bg-holder {
         padding-bottom: 10rem;
     }
@@ -316,15 +316,33 @@ header .datacamp {
     }
     .about-me .bio {
         position: absolute;
-        top: 170%;
-        left: 25.5%;
+        top: 135%;
+        left: 29.5%;
+        width: 22%;
+        line-height: 0.5;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1450px) and (max-width: 1609.9px) {
+    .about-me .bg-holder {
+        padding-bottom: 10rem;
+    }
+    .about-me-holder {
+        max-width: 50%;
+        margin-left: 50%;
+    }
+    .about-me .bio {
+        position: absolute;
+        top: 135%;
+        left: 26.5%;
         width: 23%;
         line-height: 0.5;
         font-size: 16px;
     }
 }
 
-@media (min-width: 1070.1px)and (max-width:1199.9px) {
+@media (min-width: 1400px)and (max-width:1449.9px) {
     .about-me .bg-holder {
         padding-bottom: 10rem;
     }
@@ -334,15 +352,15 @@ header .datacamp {
     }
     .about-me .bio {
         position: absolute;
-        top: 181%;
-        left: 27.5%;
-        width: 29%;
+        top: 133%;
+        left: 23.5%;
+        width: 24%;
         line-height: 0.5;
         font-size: 16px;
     }
 }
 
-@media (min-width: 992px)and (max-width:1070px) {
+@media (min-width: 1200px)and (max-width:1399.9px) {
     .about-me .bg-holder {
         padding-bottom: 10rem;
     }
@@ -352,9 +370,27 @@ header .datacamp {
     }
     .about-me .bio {
         position: absolute;
-        top: 181%;
-        left: 24.5%;
-        width: 29%;
+        top: 137%;
+        left: 25.5%;
+        width: 24%;
+        line-height: 0.5;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px)and (max-width:1199.9px) {
+    .about-me .bg-holder {
+        padding-bottom: 10rem;
+    }
+    .about-me-holder {
+        max-width: 50%;
+        margin-left: 50%;
+    }
+    .about-me .bio {
+        position: absolute;
+        top: 144%;
+        left: 26.5%;
+        width: 25%;
         line-height: 0.5;
         font-size: 16px;
     }
@@ -818,7 +854,14 @@ body.light.contact .contactform textarea:focus,
         line-height: 2.2;
     }
     .contact-title {
-        margin-left: auto !important;
+        margin-left: 9% !important;
+    }
+    .contact .title-bg span {
+        font-size: 42px;
+        line-height: 7.55;
+    }
+    .contact h2 {
+        font-size: 24px !important;
     }
 }
 
@@ -829,6 +872,10 @@ body.light.contact .contactform textarea:focus,
     .contact .first,
     .contact .sec {
         font-size: 65px;
+    }
+    .contact .title-bg span {
+        font-size: 100px;
+        line-height: 3.6;
     }
 }
 
