@@ -138,6 +138,99 @@ const handleScroll = () => {
 window.addEventListener('scroll', handleScroll);
 
 
+
+
+
+
+
+// Get the contact div element
+var contactDiv = document.getElementById('contact');
+
+// Get the contact title element
+var contactTitle = contactDiv.querySelector('.contact-title');
+
+// Initialize the previous scrolling Y position
+var prevScrollY = window.scrollY || window.pageYOffset;
+
+// Initialize the scroll counter
+var scrollCounter = 0;
+
+// Initialize the original translation values
+var originalTranslateXFirst = 0;
+var originalTranslateXSec = 0;
+
+// Add an event listener to the window scroll event
+window.addEventListener('scroll', function() {
+    // Get the current scrolling Y position
+    var scrollY = window.scrollY || window.pageYOffset;
+
+    // Get the top offset of the contact div minus 100 pixels
+    var contactTop = contactDiv.offsetTop - 100;
+
+    // Check if the scrolling Y position is at least 100 pixels above the contact div
+    if (scrollY >= contactTop && window.innerWidth >= 576) {
+        // Check if scrolling down
+        if (scrollY > prevScrollY) {
+            scrollCounter++;
+
+            // Calculate the translation values based on the scroll position
+            var translateXFirst = -3 * scrollCounter;
+            var translateXSec = scrollCounter;
+
+            // Apply the calculated translations to the "first" and "sec" classes
+            contactTitle.querySelector('.first').style.transform = `translateX(${translateXFirst}px)`;
+            contactTitle.querySelector('.sec').style.transform = `translateX(${translateXSec}px)`;
+
+            // Save the current translation values as the original values
+            originalTranslateXFirst = translateXFirst;
+            originalTranslateXSec = translateXSec;
+        } else {
+            // Scrolling direction is up
+            // Check if the original translation values are not zero
+            if (originalTranslateXFirst !== 0 && originalTranslateXSec !== 0) {
+                scrollCounter--;
+
+                // Calculate the translation values based on the scroll position
+                var translateXFirst = -3 * scrollCounter;
+                var translateXSec = scrollCounter;
+
+                // Apply the calculated translations to the "first" and "sec" classes
+                contactTitle.querySelector('.first').style.transform = `translateX(${translateXFirst}px)`;
+                contactTitle.querySelector('.sec').style.transform = `translateX(${translateXSec}px)`;
+
+                console.log('Up');
+            }
+        }
+    } else {
+        // The scrolling Y position is not at least 100 pixels above the contact div or window width is less than 720px
+        contactTitle.querySelector('.first').style.transform = 'translateX(0)';
+        contactTitle.querySelector('.sec').style.transform = 'translateX(0)';
+        console.log('Out');
+
+        // Reset the scroll counter to 0
+        scrollCounter = 0;
+    }
+
+    // Update the previous scrolling Y position
+    prevScrollY = scrollY;
+});
+
+// Add an event listener to the window resize event
+window.addEventListener('resize', function() {
+    // Check if the window width is less than 720px
+    if (window.innerWidth < 576) {
+        // Reset the scroll counter to 0
+        scrollCounter = 0;
+
+        // Reset the translations to 0
+        contactTitle.querySelector('.first').style.transform = 'translateX(0)';
+        contactTitle.querySelector('.sec').style.transform = 'translateX(0)';
+    }
+});
+
+
+
+
 //background animated
 
 //particlesJS('particles-js',
