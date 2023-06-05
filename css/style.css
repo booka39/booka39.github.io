@@ -849,19 +849,15 @@ body.light.contact .contactform textarea:focus,
     .contact .sec {
         font-size: 50px;
     }
-    .contact .title-bg span {
-        font-size: 60px;
-        line-height: 2.2;
-    }
     .contact-title {
         margin-left: 9% !important;
     }
     .contact .title-bg span {
-        font-size: 42px;
-        line-height: 7.55;
+        font-size: 80px;
+        line-height: 4.2;
     }
     .contact h2 {
-        font-size: 24px !important;
+        font-size: 40px;
     }
 }
 
