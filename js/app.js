@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
 
         // Get the target element by ID
-        var targetElement = document.getElementById('contact');
+        var targetElement = document.getElementById('get-touch');
         if (targetElement) {
             // Scroll to the target element
             targetElement.scrollIntoView();
@@ -191,7 +191,7 @@ window.addEventListener('scroll', function() {
     // Get the current scrolling Y position
     var scrollY = window.scrollY || window.pageYOffset;
 
-    // Get the top offset of the contact div minus 100 pixels
+    // Get the top offset of the contact div 
     var contactTop = contactDiv.offsetTop - 100;
 
     // Check if the scrolling Y position is at least 100 pixels above the contact div

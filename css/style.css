@@ -289,7 +289,7 @@ header .datacamp {
 }
 
 .show-cv:hover::before {
-    left: 76px;
+    left: 67px;
 }
 
 .hire-me .fa-arrow-right-long {
@@ -571,16 +571,27 @@ header .datacamp {
     background-color: #111111;
 }
 
+.contact-title {
+    padding: 19vh 0;
+    margin-left: 6%;
+}
+
 .contact .first,
 .contact .sec {
     font-family: "poppins", sans-serif;
-    font-size: 59px;
+    font-size: 90px;
     color: white;
     position: relative;
+    font-weight: 500 !important;
+    transition: transform 0.5s ease-in-out;
 }
 
 .sec {
     padding-bottom: 5rem;
+}
+
+.contact .row-padding {
+    padding-top: 7rem;
 }
 
 .contact .text {
@@ -590,18 +601,23 @@ header .datacamp {
 
 .contact h2 {
     color: #e74d61;
+    font-size: 56px;
+}
+
+#get-touch {
+    padding-top: 9rem;
 }
 
 .contact .title-bg {
     position: absolute;
-    left: 50%;
+    left: 48%;
     transform: translateX(-48%);
 }
 
 .contact .title-bg span {
-    font-size: 73px;
+    font-size: 110px;
     letter-spacing: 10px;
-    line-height: 2;
+    line-height: 3.2;
     font-weight: 800;
     color: rgba(255, 255, 255, 0.07);
 }
@@ -808,7 +824,17 @@ body.light.contact .contactform textarea:focus,
 
 @media (min-width:576px) and (max-width:767.9px) {
     .contact-title {
-        margin-left: 8rem !important;
+        margin-left: 0rem !important;
+    }
+    .contact .first,
+    .contact .sec {
+        font-size: 65px;
+    }
+}
+
+@media (min-width:768px) and (max-width:991.9px) {
+    .contact-title {
+        margin-left: 0;
     }
 }
 
