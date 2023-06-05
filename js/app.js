@@ -137,7 +137,34 @@ const handleScroll = () => {
 // Add event listener for scroll
 window.addEventListener('scroll', handleScroll);
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the hire-me and show-cv elements
+    var hireMeLink = document.querySelector('.hire-me');
+    var showCVLink = document.querySelector('.show-cv');
 
+    // Add a click event listener to the hire-me link
+    hireMeLink.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // Get the target element by ID
+        var targetElement = document.getElementById('contact');
+        if (targetElement) {
+            // Scroll to the target element
+            targetElement.scrollIntoView();
+        }
+    });
+
+    // Add a click event listener to the show-cv link
+    showCVLink.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // Specify the target URL
+        var targetURL = 'https://drive.google.com/file/d/1oGcHj8OxaJp7gOGS6Qg7pyf2_byUv3Tm/view?usp=drivesdk';
+
+        // Open the target URL in a new tab or window
+        window.open(targetURL, '_blank');
+    });
+});
 
 
 
