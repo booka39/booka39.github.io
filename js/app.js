@@ -75,7 +75,9 @@ window.addEventListener("scroll", function() {
 
 // Get all the <li> elements inside the navbar
 const navbarItems = document.querySelectorAll('.navbar-nav li');
-
+navbarItems.forEach((item) => {
+    item.classList.remove('active');
+});
 // Function to handle scroll event
 const handleScroll = () => {
     const scrollPosition = window.scrollY;
