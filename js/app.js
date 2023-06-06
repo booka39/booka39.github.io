@@ -73,7 +73,6 @@ window.addEventListener("scroll", function() {
 });
 
 
-//nav section activation
 // Get all the <li> elements inside the navbar
 const navbarItems = document.querySelectorAll('.navbar-nav li');
 
@@ -86,14 +85,9 @@ const handleScroll = () => {
 
     // Check if the scroll position is within the header section
     if (scrollPosition >= header.offsetTop && scrollPosition < header.offsetTop + header.offsetHeight) {
-        // Set the active state for the li element with href="#about-me"
+        // Remove the "active" class from all <li> elements
         navbarItems.forEach((item) => {
-            const href = item.querySelector('a').getAttribute('href');
-            if (href === '#about-me') {
-                item.classList.add('active');
-            } else {
-                item.classList.remove('active');
-            }
+            item.classList.remove('active');
         });
     } else if (scrollPosition + windowHeight >= scrollHeight - 150) {
         // Iterate over each <li> element
@@ -111,11 +105,9 @@ const handleScroll = () => {
             const href = item.querySelector('a').getAttribute('href');
             const section = document.querySelector(href);
 
-            // Check if the section is visible in the viewport with an additional offset of 20 pixels
-            if (
-                section.offsetTop - 150 < scrollPosition &&
-                section.offsetTop + section.offsetHeight > scrollPosition
-            ) {
+            // Check if the section is visible in the viewport with an additional offset of 150 pixels
+            if (section.offsetTop - 150 < scrollPosition &&
+                section.offsetTop + section.offsetHeight > scrollPosition) {
                 // Remove the "active" class from other <li> elements
                 navbarItems.forEach((otherItem) => {
                     if (otherItem !== item) {
@@ -130,6 +122,10 @@ const handleScroll = () => {
         });
     }
 };
+
+// Attach the scroll event listener to the window object
+window.addEventListener('scroll', handleScroll);
+
 
 
 

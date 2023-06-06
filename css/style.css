@@ -1,7 +1,7 @@
 /*  general styles */
 
 body {
-    font-family: "Roboto", "sans-serif";
+    font-family: 'Poppins', 'Roboto', sans-serif;
 }
 
 a {
@@ -260,8 +260,10 @@ header .datacamp {
     border: 1px solid #e74d61;
     background-color: #e74d61;
     color: white;
-    padding: 0.75rem;
+    padding: 13px 22px;
     border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .hire-me:hover,
@@ -281,19 +283,19 @@ header .datacamp {
     background-color: #fde6e9;
     border-radius: 11px;
     opacity: 0.5;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 .hire-me:hover::before {
-    left: 78px;
+    left: 84px;
 }
 
 .show-cv:hover::before {
-    left: 67px;
+    left: 77px;
 }
 
 .hire-me .fa-arrow-right-long {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .hire-me:hover .fa-arrow-right-long {
@@ -638,6 +640,7 @@ header .datacamp {
 .contact h2 {
     color: #e74d61;
     font-size: 56px;
+    font-weight: 900 !important;
 }
 
 #get-touch {
@@ -646,14 +649,14 @@ header .datacamp {
 
 .contact .title-bg {
     position: absolute;
-    left: 48%;
-    transform: translateX(-48%);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .contact .title-bg span {
     font-size: 110px;
     letter-spacing: 10px;
-    line-height: 3.2;
+    line-height: 3.23;
     font-weight: 800;
     color: rgba(255, 255, 255, 0.07);
 }
