@@ -152,6 +152,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+
+    //icons of about me 
+    const imageContainer = document.querySelector('.img-overlay');
+    const icons = document.querySelector('#about-me .icons');
+    console.log(icons)
+
+    imageContainer.addEventListener('mouseover', () => {
+        icons.classList.add('about-me-active');
+    });
+
+    imageContainer.addEventListener('mouseout', () => {
+        icons.classList.remove('about-me-active');
+    });
+
+
+
     // Add a click event listener to the show-cv link
     showCVLink.addEventListener('click', function(event) {
         event.preventDefault();

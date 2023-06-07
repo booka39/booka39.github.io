@@ -235,6 +235,70 @@ header .datacamp {
     padding-bottom: 3rem;
 }
 
+.about-me-img-holder {
+    position: relative;
+    display: inline-block;
+}
+
+.img-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#about-me .hvr-sweep-to-top:before {
+    background: rgb(0 0 0 / 50%);
+    border-radius: 15px;
+    transition-duration: .5s;
+}
+
+.about-me-img-holder .icons {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    transition: top 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.about-me-img-holder .icons.about-me-active {
+    top: 52%;
+    opacity: 1;
+    display: block;
+}
+
+.about-me-img-holder .icons {
+    display: none;
+}
+
+.about-me-img-holder .icons .linkedin,
+.about-me-img-holder .icons .twitter {
+    font-size: 22px;
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+.about-me .icons .tableau {
+    max-width: 26px;
+    background-color: transparent;
+    border: none;
+    padding: 5px 0 0 0 !important;
+}
+
+.about-me-img-holder .icons .linkedin:hover,
+.about-me-img-holder .icons .twitter:hover {
+    color: #e74d61;
+    background-color: transparent;
+    border: none;
+}
+
+.about-me-img-holder .icons .tableau:hover {
+    background-color: #e74d61;
+    border: none;
+}
+
 .line-holder .fa-address-card {
     font-size: 30px;
 }
@@ -276,7 +340,7 @@ header .datacamp {
 .show-cv::before {
     content: "";
     position: absolute;
-    top: 3.5px;
+    top: 3.25px;
     left: 3px;
     width: 34%;
     height: 84%;
@@ -607,6 +671,15 @@ header .datacamp {
 
 .contact {
     background-color: #111111;
+    padding-left: 5rem;
+    padding-right: 6rem;
+}
+
+@media (min-width:767.9px) {
+    .contact {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
 }
 
 .contact-title {
@@ -666,11 +739,6 @@ header .datacamp {
     top: 1px;
 }
 
-.contact img {
-    max-width: 11%;
-    margin-top: auto;
-}
-
 .contact p {
     color: rgb(182, 182, 182);
     margin: 0;
@@ -680,8 +748,22 @@ header .datacamp {
     color: white;
 }
 
-.contact .icons .twitter,
-.contact .icons .linkedin {
+.contact .fa-envelope {
+    font-size: 38px;
+    margin-top: auto;
+}
+
+.contact .fa-phone {
+    font-size: 30px;
+    background-color: #e74d61;
+    border-radius: 8px;
+    padding: 2px;
+    margin-top: auto;
+    margin-bottom: 4px;
+}
+
+.icons .twitter,
+.icons .linkedin {
     color: white;
     font-size: 29px;
     width: 40px;
@@ -689,39 +771,39 @@ header .datacamp {
     background-color: #2b2a2a;
 }
 
-.contact .icons .twitter:hover {
+.icons .twitter:hover {
     background-color: #1da1f2;
 }
 
-.contact .icons .linkedin:hover {
+.icons .linkedin:hover {
     background-color: #0072b1;
     border: #0072b1 solid 2px;
 }
 
-.contact .icons .linkedin:hover {
+.icons .linkedin:hover {
     background-color: #0072b1;
     border: #0072b1 solid 2px;
 }
 
-.contact .icons .tableau:hover {
+.icons .tableau:hover {
     background-color: #21467f;
     border: #21467f solid 2px;
 }
 
-.contact .icons .twitter:hover,
-.contact .icons .linkedin:hover,
-.contact .icons .tableau:hover {
+.icons .twitter:hover,
+.icons .linkedin:hover,
+.icons .tableau:hover {
     cursor: pointer;
     transition: all ease-in 0.25s;
 }
 
-.contact .icons .linkedin {
+.icons .linkedin {
     font-size: 25px;
     background-color: #2b2a2a;
     border: #2b2a2a solid 2px;
 }
 
-.contact .icons .tableau {
+.icons .tableau {
     max-width: 42px;
     margin-bottom: 27px;
     background-color: #2b2a2a;
