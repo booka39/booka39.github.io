@@ -498,3 +498,23 @@ projects.forEach(project => {
         project.style.display = 'none';
     }
 });
+//on submit form
+let form = document.querySelector('#contact form');
+form.addEventListener('submit', (e) => {
+    //prevent default
+    e.preventDefault();
+    //script url
+    let scriptURL = 'https://script.google.com/macros/s/AKfycbwWTNKmx17KuuBrhRM20aPgGmzwSPkmfEiCdSc4wMrwNIsjLkHLxOBDzoln-UOHu0vh/exec';
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => //set opacity to 1 of output_message
+            document.querySelector('#contact .output_message').style.opacity = 1
+        )
+        .then(response => //reset form
+            form.reset()
+        )
+        //after 4 seconds set opacity to 0 of output_message
+        .then(setTimeout(() => {
+            document.querySelector('#contact .output_message').style.opacity = 0
+        }, 4000))
+        .catch(error => console.error('Error!', error.message))
+});

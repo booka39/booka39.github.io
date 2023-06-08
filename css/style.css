@@ -867,6 +867,11 @@ body.light.contact .contactform textarea:focus,
     height: 46px;
     line-height: 46px;
     border-radius: 30px;
+    font-size: 26px;
+    font-weight: 500;
+    background-color: #1fa51f;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
 }
 
 @media(max-width:575.9px) {
