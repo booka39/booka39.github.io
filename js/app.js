@@ -515,6 +515,6 @@ form.addEventListener('submit', (e) => {
         //after 4 seconds set opacity to 0 of output_message
         .then(setTimeout(() => {
             document.querySelector('#contact .output_message').style.opacity = 0
-        }, 4000))
+        }, 6000))
         .catch(error => console.error('Error!', error.message))
 });
