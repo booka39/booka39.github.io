@@ -372,93 +372,32 @@ header .datacamp {
     color: #ffffff;
 }
 
-@media (min-width:1610px) {
-    .about-me .bg-holder {
-        padding-bottom: 10rem;
-    }
+@media (min-width:1200px) {
     .about-me-holder {
         max-width: 50%;
         margin-left: 50%;
-    }
-    .about-me .bio {
-        position: absolute;
-        top: 135%;
-        left: 29.5%;
-        width: 22%;
-        line-height: 0.5;
-        font-size: 16px;
     }
 }
 
-@media (min-width: 1450px) and (max-width: 1609.9px) {
-    .about-me .bg-holder {
-        padding-bottom: 10rem;
-    }
-    .about-me-holder {
-        max-width: 50%;
-        margin-left: 50%;
-    }
-    .about-me .bio {
-        position: absolute;
-        top: 135%;
-        left: 26.5%;
-        width: 23%;
-        line-height: 0.5;
-        font-size: 16px;
+@media (min-width:992px) and (max-width:1199.9px) {
+    .about-me .col-left {
+        margin-top: 10%;
+        align-self: start !important;
     }
 }
 
-@media (min-width: 1400px)and (max-width:1449.9px) {
+@media (min-width:991.9px) {
     .about-me .bg-holder {
-        padding-bottom: 10rem;
-    }
-    .about-me-holder {
-        max-width: 50%;
-        margin-left: 50%;
+        padding-bottom: 7rem;
     }
     .about-me .bio {
         position: absolute;
-        top: 133%;
-        left: 23.5%;
-        width: 24%;
+        top: 12%;
+        left: 80.5%;
+        width: 320px;
         line-height: 0.5;
         font-size: 16px;
-    }
-}
-
-@media (min-width: 1200px)and (max-width:1399.9px) {
-    .about-me .bg-holder {
-        padding-bottom: 10rem;
-    }
-    .about-me-holder {
-        max-width: 50%;
-        margin-left: 50%;
-    }
-    .about-me .bio {
-        position: absolute;
-        top: 137%;
-        left: 25.5%;
-        width: 24%;
-        line-height: 0.5;
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 992px)and (max-width:1199.9px) {
-    .about-me .bg-holder {
-        padding-bottom: 10rem;
-    }
-    .about-me-holder {
-        max-width: 50%;
-        margin-left: 50%;
-    }
-    .about-me .bio {
-        position: absolute;
-        top: 144%;
-        left: 26.5%;
-        width: 25%;
-        line-height: 0.5;
-        font-size: 16px;
+        z-index: 999;
     }
 }
 
@@ -938,11 +877,11 @@ body.light.contact .contactform textarea:focus,
         margin-left: 9% !important;
     }
     .contact .title-bg span {
-        font-size: 80px;
-        line-height: 4.2;
+        font-size: 70px;
+        line-height: 4.78;
     }
     .contact h2 {
-        font-size: 40px;
+        font-size: 37.5px;
     }
 }
 
@@ -955,8 +894,11 @@ body.light.contact .contactform textarea:focus,
         font-size: 65px;
     }
     .contact .title-bg span {
-        font-size: 100px;
-        line-height: 3.6;
+        font-size: 90px;
+        line-height: 3.8;
+    }
+    .contact h2 {
+        font-size: 46px;
     }
 }
 
