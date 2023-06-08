@@ -12,6 +12,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
 /* Otherwise just put the config content (json): */
 
 
+
 //arrow color 
 
 const svgElement = document.querySelector('.arrow-down');
@@ -202,7 +203,11 @@ var originalTranslateXSec = 0;
 
 // Set the maximum translation values for 'first' and 'sec'
 var maxTranslateXFirst = -36;
-var maxTranslateXSec = 12;
+var maxTranslateXSec = 20;
+
+// Set the maximum opacity values for 'first' and 'sec'
+var maxOpacityFirst = 0.5;
+var maxOpacitySec = 0.5;
 
 // Add an event listener to the window scroll event
 window.addEventListener('scroll', function() {
@@ -218,13 +223,17 @@ window.addEventListener('scroll', function() {
         if (scrollY > prevScrollY) {
             scrollCounter++;
 
-            // Calculate the translation values based on the scroll position
+            // Calculate the translation and opacity values based on the scroll position
             var translateXFirst = Math.min(-3 * scrollCounter, maxTranslateXFirst);
             var translateXSec = Math.min(scrollCounter, maxTranslateXSec);
+            var opacityFirst = Math.max(1 - scrollCounter * 0.01, maxOpacityFirst);
+            var opacitySec = Math.max(1 - scrollCounter * 0.01, maxOpacitySec);
 
-            // Apply the calculated translations to the "first" and "sec" classes
+            // Apply the calculated translations and opacities to the "first" and "sec" classes
             contactTitle.querySelector('.first').style.transform = `translateX(${translateXFirst}px)`;
             contactTitle.querySelector('.sec').style.transform = `translateX(${translateXSec}px)`;
+            contactTitle.querySelector('.first').style.opacity = opacityFirst;
+            contactTitle.querySelector('.sec').style.opacity = opacitySec;
 
             // Save the current translation values as the original values
             originalTranslateXFirst = translateXFirst;
@@ -235,22 +244,25 @@ window.addEventListener('scroll', function() {
             if (originalTranslateXFirst !== 0 && originalTranslateXSec !== 0) {
                 scrollCounter--;
 
-                // Calculate the translation values based on the scroll position
+                // Calculate the translation and opacity values based on the scroll position
                 var translateXFirst = Math.min(-3 * scrollCounter, maxTranslateXFirst);
                 var translateXSec = Math.min(scrollCounter, maxTranslateXSec);
+                var opacityFirst = Math.max(1 - scrollCounter * 0.01, maxOpacityFirst);
+                var opacitySec = Math.max(1 - scrollCounter * 0.01, maxOpacitySec);
 
-                // Apply the calculated translations to the "first" and "sec" classes
+                // Apply the calculated translations and opacities to the "first" and "sec" classes
                 contactTitle.querySelector('.first').style.transform = `translateX(${translateXFirst}px)`;
                 contactTitle.querySelector('.sec').style.transform = `translateX(${translateXSec}px)`;
-
-                console.log('Up');
+                contactTitle.querySelector('.first').style.opacity = opacityFirst;
+                contactTitle.querySelector('.sec').style.opacity = opacitySec;
             }
         }
     } else {
         // The scrolling Y position is not at least 100 pixels above the contact div
         contactTitle.querySelector('.first').style.transform = 'translateX(0)';
         contactTitle.querySelector('.sec').style.transform = 'translateX(0)';
-        console.log('Out');
+        contactTitle.querySelector('.first').style.opacity = '1';
+        contactTitle.querySelector('.sec').style.opacity = '1';
 
         // Reset the scroll counter to 0
         scrollCounter = 0;
@@ -259,8 +271,6 @@ window.addEventListener('scroll', function() {
     // Update the previous scrolling Y position
     prevScrollY = scrollY;
 });
-
-
 
 
 //background animated
