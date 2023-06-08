@@ -645,6 +645,13 @@ header .datacamp {
     padding-top: 7rem;
 }
 
+.contact .C {
+    width: 45px;
+    height: 45px;
+    background-color: #ffffff43;
+    margin: 0 auto;
+}
+
 .contact .text {
     color: white;
     font-size: 16px;
@@ -654,6 +661,21 @@ header .datacamp {
     color: #e74d61;
     font-size: 56px;
     font-weight: 900 !important;
+}
+
+.contact .arrow-bg {
+    width: 45px;
+    height: 45px;
+    background-color: #ffffff43;
+    margin: 0 auto;
+}
+
+.contact .arrow-down {
+    transform: scale(0.5);
+}
+
+.contact .arrow-down:hover {
+    cursor: pointer;
 }
 
 #get-touch {
