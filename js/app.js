@@ -203,7 +203,7 @@ var originalTranslateXSec = 0;
 
 // Set the maximum translation values for 'first' and 'sec'
 var maxTranslateXFirst = -36;
-var maxTranslateXSec = 20;
+var maxTranslateXSec = 50;
 
 // Set the maximum opacity values for 'first' and 'sec'
 var maxOpacityFirst = 0.5;
@@ -500,21 +500,29 @@ projects.forEach(project => {
 });
 //on submit form
 let form = document.querySelector('#contact form');
+let sendingDiv = document.querySelector('#contact #sending'); // Assuming the div has the class 'sending'
+
 form.addEventListener('submit', (e) => {
-    //prevent default
+    // Prevent default
     e.preventDefault();
-    //script url
+    // Script URL
     let scriptURL = 'https://script.google.com/macros/s/AKfycbwWTNKmx17KuuBrhRM20aPgGmzwSPkmfEiCdSc4wMrwNIsjLkHLxOBDzoln-UOHu0vh/exec';
+
+    // Set opacity of sending div to 1
+    sendingDiv.style.opacity = 1;
+
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => //set opacity to 1 of output_message
-            document.querySelector('#contact .output_message').style.opacity = 1
-        )
-        .then(response => //reset form
-            form.reset()
-        )
-        //after 4 seconds set opacity to 0 of output_message
-        .then(setTimeout(() => {
-            document.querySelector('#contact .output_message').style.opacity = 0
-        }, 6000))
-        .catch(error => console.error('Error!', error.message))
+        .then(response => {
+            // Set opacity of output_message div to 1
+            document.querySelector('#contact  #message-sent').style.opacity = 1;
+            // Reset form
+            form.reset();
+            // After 4 seconds, set opacity of output_message div to 0
+            setTimeout(() => {
+                document.querySelector('#contact #message-sent').style.opacity = 0;
+            }, 4000);
+            // Reset opacity of sending div to 0
+            sendingDiv.style.opacity = 0;
+        })
+        .catch(error => console.error('Error!', error.message));
 });

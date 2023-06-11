@@ -2,7 +2,34 @@
 
 body {
     font-family: 'Poppins', 'Roboto', sans-serif;
-    scroll-behavior: smooth;
+}
+
+
+/* For Webkit-based browsers (Chrome, Safari) */
+
+::-webkit-scrollbar {
+    width: 12px;
+    overflow-y: auto;
+    appearance: none;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    overflow-y: auto;
+    appearance: none;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+    overflow-y: auto;
+    appearance: none;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    overflow-y: auto;
+    appearance: none;
 }
 
 a {
@@ -883,17 +910,24 @@ body.light.contact .contactform textarea:focus,
     margin: 24px 0;
 }
 
-.contact .contactform .output_message {
+#message-sent,
+#sending {
     display: block;
     color: #fff;
-    height: 46px;
     line-height: 46px;
-    border-radius: 30px;
+    border-radius: 15px;
     font-size: 26px;
     font-weight: 500;
-    background-color: #1fa51f;
     transition: all 0.3s ease-in-out;
     opacity: 0;
+}
+
+#message-sent {
+    background-color: #2ecc71;
+}
+
+#sending {
+    background-color: #dd8622;
 }
 
 @media(max-width:575.9px) {
