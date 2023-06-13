@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-3 align-self-center col-left">
+                <div class="col-12 col-lg-3 align-self-start col-left">
                     <div class="about-me-img-holder">
                         <div class=" bio pt-3 d-none d-lg-block">
                             <div class="bio-text p-3">
@@ -148,24 +148,26 @@
                 </div>
                 <div class="col-12 offset-lg-4 col-lg-5 offset-xl-3 col-xl-6 ps-lg-5 px-2 align-self-center">
                     <p class="text mt-4">
-                        Hi, I'm Ahmed. <br /> I have honed my expertise in developing business intelligence solutions, performing ETL processes for data warehousing, data-driven analysis, and creating interactive dashboards using a variety of tools such
-                        as Tableau, Power BI, and SQL. My goal is to provide critical insights that drive business growth and success.
+                        Hi, I'm Ahmed. <br /> <br> I have honed my expertise in developing business intelligence solutions, performing ETL processes for data warehousing, data-driven analysis, and creating interactive dashboards using a variety of tools
+                        such as Tableau, Power BI, and SQL. My goal is to provide critical insights that drive business growth and success.
                     </p>
+                    <div class="d-flex justify-content-around">
 
-                    <button type="button" id="show-cv" class="btn m-3 show-cv">
+                        <button type="button" id="show-cv" class="btn my-3  show-cv">
               <a
                 href="https://drive.google.com/file/d/1oGcHj8OxaJp7gOGS6Qg7pyf2_byUv3Tm/view?usp=drivesdk"
                 target="_blank"
                 >Show CV <i class="fa-solid fa-arrow-down-long ps-1 " style="color: #ffffff;"></i> </a
               >
             </button>
-                    <button type="button" id="hire-me" class="btn m-3 hire-me">
+                        <button type="button" id="hire-me" class="btn my-3  hire-me">
               <a href="#get-touch">Hire Me</a>
               <i
                 class="fa-solid fa-arrow-right-long ps-3"
                 style="color: #ffffff"
               ></i>
             </button>
+                    </div>
                 </div>
                 <div class="col bio pt-3 d-block d-lg-none">
                     <div class="bio-text p-3">
@@ -196,7 +198,8 @@
                 <div class="line line2 pb-1"></div>
                 <div class="line line1 pb-1"></div>
             </div>
-            <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- 
                 <div class="col">
                     <div class="card h-100 pt-3 hvr-glow">
                         <img src="pics/data-cleaning-icon.svg" class="card-img-top text-center svg" style="max-width: 20%; margin-left: 16px" alt="data cleaning icon" />
@@ -216,18 +219,18 @@
                         </div>
                     </div>
                 </div>
+-->
                 <div class="col">
                     <div class="card h-100 pt-3 hvr-glow">
-                        <img src="pics/dashboard.svg" class="card-img-top text-center svg" style="max-width: 20%; margin-left: 16px" alt="Reporting icon" />
-                        <img src="pics/dashboard-hover.svg" class="card-img-top text-center svg-hover dashboard-hover" style="max-width: 20%; margin-left: 16px; transform: scale(1.1)" alt="Reporting icon" />
+                        <img src="pics/dashboard.svg" class="card-img-top text-center svg" style="max-width: 23%; margin-left: 16px" alt="Reporting icon" />
+                        <img src="pics/dashboard-hover.svg" class="card-img-top text-center svg-hover dashboard-hover" style="max-width: 23%; margin-left: 16px; transform: scale(1.1)" alt="Reporting icon" />
                         <div class="card-body">
                             <h5 class="card-title text-center text-md-start py-3">
                                 Reporting and Dashboard Creation
                             </h5>
                             <div class="card-text">
                                 <ul style="list-style-type: disc">
-                                    <li>Report generation and automation.</li>
-                                    <li>Interactive dashboard design and development.</li>
+                                    <li>Interactive dashboard design.</li>
                                     <li>Data-driven decision-making support.</li>
                                     <li>Infographics and data storytelling.</li>
                                 </ul>
@@ -245,9 +248,10 @@
                             </h5>
                             <div class="card-text">
                                 <ul style="list-style-type: disc">
-                                    <li>Data modeling and database design.</li>
-                                    <li>Data warehousing management.</li>
-                                    <li>Data governance and metadata management.</li>
+                                    <li>Database architecture: dimensional models and schema design.</li>
+                                    <li>Develop ETL processes to populate the data warehouse.</li>
+                                    <li>Design efficient and scalable data pipelines.</li>
+                                    <li>Implement data quality measurements.</li>
                                 </ul>
                             </div>
                         </div>
@@ -259,17 +263,16 @@
                         <img src="pics/analytics-icon-hover.svg" class="card-img-top text-center svg-hover" style="max-width: 20%; margin-left: 16px; transform: scale(1.1)" alt="Reporting icon" />
                         <div class="card-body">
                             <h5 class="card-title text-center text-md-start py-3">
-                                Data Analysis and Interpretation
+                                Analysis and Interpretation
                             </h5>
                             <div class="card-text">
                                 <ul style="list-style-type: disc">
                                     <li>Data exploration and descriptive analytics.</li>
                                     <li>Statistical analysis.</li>
                                     <li>
-                                        Key performance Indicator (KPIs) definition and monitoring.
+                                        KPIs definition and monitoring.
                                     </li>
                                     <li>Customer behavior analysis and segmentation.</li>
-                                    <li>A/B testing and experiment design.</li>
                                 </ul>
                             </div>
                         </div>
@@ -288,22 +291,25 @@
                 <div class="line line2 pb-1"></div>
                 <div class="line line1 pb-1"></div>
             </div>
-            <div class="btns text-center">
-                <button type="button" id="shaw-all" class="btn btn-outline-danger mb-2">
+            <div class="btns-holder text-center ">
+                <div class="btns text-center p-2">
+                    <div id="hover-btn-bg" class="hover-btn-bg"></div>
+                    <button type="button" id="shaw-all" class="btn ">
             Show all
           </button>
-                <button type="button" id="e-commerce" class="btn btn-outline-danger mb-2 active-btn">
+                    <button type="button" id="e-commerce" class="btn active-btn">
             E-commerce
           </button>
-                <button type="button" id="healthcare" class="btn btn-outline-danger mb-2">
+                    <button type="button" id="healthcare" class="btn">
             Healthcare
           </button>
-                <button type="button" id="travel" class="btn btn-outline-danger mb-2">
+                    <button type="button" id="travel" class="btn">
             Travel
           </button>
-                <button type="button" id="other" class="btn btn-outline-danger mb-2">
+                    <button type="button" id="other" class="btn">
             Other
           </button>
+                </div>
             </div>
             <div class="projects mt-5">
                 <div class="row row-cols-1 row-cols-md-2 justify-content-center g-4">

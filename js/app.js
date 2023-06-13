@@ -422,6 +422,47 @@ cards.forEach((card) => {
 // Get all the buttons
 const buttons = document.querySelectorAll('.btns button');
 
+
+//hover on btns portfolio
+//select all buttons in class btns
+let btns = document.querySelectorAll('#portfolio .btns button');
+//if hover on button #shaw-all change width of .hover-btn-bg to 89 px
+//if hover on button #e-commerce change width of .hover-btn-bg to width: 116px; and transform: translateX(84%);
+//if hover on button #healthcare change width of .hover-btn-bg to width: 116px; and transform: translateX(168%);
+//if hover on button #travel change width of .hover-btn-bg to width: 116px; and transform: translateX(252%);
+//if hover on button #other change width of .hover-btn-bg to width: 116px; and transform: translateX(336%);
+//for each button in btns if hover set color to white and if hover end set color to black
+btns.forEach((btn) => {
+    btn.addEventListener('mouseover', () => {
+        btn.style.color = 'white';
+        let hoverBtnBg = document.querySelector('#portfolio .btns .hover-btn-bg');
+        if (btn.id == 'shaw-all') {
+            hoverBtnBg.style.width = '94px';
+            hoverBtnBg.style.transform = 'translateX(0%)';
+        } else if (btn.id == 'e-commerce') {
+            hoverBtnBg.style.width = '135px';
+            hoverBtnBg.style.transform = 'translateX(71%)';
+        } else if (btn.id == 'healthcare') {
+            hoverBtnBg.style.width = '119px';
+            hoverBtnBg.style.transform = 'translateX(191%)';
+        } else if (btn.id == 'travel') {
+            hoverBtnBg.style.width = '82px';
+            hoverBtnBg.style.transform = 'translateX(421%)';
+        } else if (btn.id == 'other') {
+            hoverBtnBg.style.width = '78px';
+            hoverBtnBg.style.transform = 'translateX(540%)';
+        }
+        btn.style.color = 'white';
+    });
+
+    btn.addEventListener('mouseout', () => {
+        btn.style.color = 'black';
+    });
+});
+
+
+
+
 // Add click event listener to each button
 buttons.forEach(button => {
     button.addEventListener('click', () => {
