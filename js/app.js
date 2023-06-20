@@ -268,129 +268,6 @@ window.addEventListener("scroll", function () {
   prevScrollY = scrollY;
 });
 
-//background animated
-
-//particlesJS('particles-js',
-
-//    {
-//        "particles": {
-//            "number": {
-//                "value": 80,
-//                "density": {
-//                    "enable": true,
-//                    "value_area": 800
-//                }
-//            },
-//            "color": {
-//                "value": "#646364"
-//            },
-//            "shape": {
-//                "type": "circle",
-//                "stroke": {
-//                    "width": 0,
-//                    "color": "#918e8e"
-//                },
-//                "polygon": {
-//                    "nb_sides": 5
-//                },
-//                "image": {
-//                    "src": "img/github.svg",
-//                    "width": 100,
-//                    "height": 100
-//                }
-//            },
-//            "opacity": {
-//                "value": 0.5,
-//                "random": false,
-//                "anim": {
-//                    "enable": false,
-//                    "speed": 1,
-//                    "opacity_min": 0.1,
-//                    "sync": false
-//                }
-//            },
-//            "size": {
-//                "value": 5,
-//                "random": true,
-//                "anim": {
-//                    "enable": false,
-//                    "speed": 40,
-//                    "size_min": 0.1,
-//                    "sync": false
-//                }
-//            },
-//            "line_linked": {
-//                "enable": true,
-//                "distance": 150,
-//                "color": "#918e8e",
-//                "opacity": 0.4,
-//                "width": 1
-//            },
-//            "move": {
-//                "enable": true,
-//                "speed": 3,
-//                "direction": "none",
-//                "random": false,
-//                "straight": false,
-//                "out_mode": "out",
-//                "attract": {
-//                    "enable": false,
-//                    "rotateX": 600,
-//                    "rotateY": 1200
-//                }
-//            }
-//        },
-//        "interactivity": {
-//            "detect_on": "canvas",
-//            "events": {
-//                "onhover": {
-//                    "enable": true,
-//                    "mode": "repulse"
-//                },
-//                "onclick": {
-//                    "enable": true,
-//                    "mode": "push"
-//                },
-//                "resize": true
-//            },
-//            "modes": {
-//                "grab": {
-//                    "distance": 400,
-//                    "line_linked": {
-//                        "opacity": 1
-//                    }
-//                },
-//                "bubble": {
-//                    "distance": 400,
-//                    "size": 40,
-//                    "duration": 2,
-//                    "opacity": 8,
-//                    "speed": 3
-//                },
-//                "repulse": {
-//                    "distance": 200
-//                },
-//                "push": {
-//                    "particles_nb": 4
-//                },
-//                "remove": {
-//                    "particles_nb": 2
-//                }
-//            }
-//        },
-//        "retina_detect": true,
-//        "config_demo": {
-//            "hide_card": false,
-//            "background_color": "#b61924",
-//            "background_image": "",
-//            "background_position": "50% 50%",
-//            "background_repeat": "no-repeat",
-//            "background_size": "cover"
-//        }
-//    }
-
-//);
-
 //hover on svg icons
 let cards = document.querySelectorAll("#services .card");
 let svgHover = document.querySelectorAll("#services .svg-hover");
@@ -414,12 +291,12 @@ cards.forEach((card) => {
 });
 
 // Get all the buttons
-const buttons = document.querySelectorAll(".btns button");
+const buttons = document.querySelectorAll("#portfolio .btns button");
 
 //hover on btns portfolio
 //select all buttons in class btns
 let btns = document.querySelectorAll("#portfolio .btns button");
-//if hover on button #shaw-all change width of .hover-btn-bg to 89 px
+//if hover on button #selected-works change width of .hover-btn-bg to 89 px
 //if hover on button #e-commerce change width of .hover-btn-bg to width: 116px; and transform: translateX(84%);
 //if hover on button #healthcare change width of .hover-btn-bg to width: 116px; and transform: translateX(168%);
 //if hover on button #travel change width of .hover-btn-bg to width: 116px; and transform: translateX(252%);
@@ -427,27 +304,28 @@ let btns = document.querySelectorAll("#portfolio .btns button");
 //for each button in btns if hover set color to white and if hover end set color to black
 btns.forEach((btn) => {
   btn.addEventListener("mouseover", () => {
-    btn.style.color = "#e74d61";
+    btn.style.color = "white";
     let hoverBtnBg = document.querySelector("#portfolio .btns .hover-btn-bg");
-    if (btn.id == "shaw-all") {
-      hoverBtnBg.style.width = "94px";
+    if (btn.id == "selected-works") {
+      hoverBtnBg.style.width = "148px";
       hoverBtnBg.style.transform = "translateX(0%)";
     } else if (btn.id == "e-commerce") {
       hoverBtnBg.style.width = "135px";
-      hoverBtnBg.style.transform = "translateX(71%)";
+      hoverBtnBg.style.transform = "translateX(112%)";
     } else if (btn.id == "healthcare") {
       hoverBtnBg.style.width = "119px";
-      hoverBtnBg.style.transform = "translateX(191%)";
+      hoverBtnBg.style.transform = "translateX(239%)";
     } else if (btn.id == "travel") {
       hoverBtnBg.style.width = "82px";
-      hoverBtnBg.style.transform = "translateX(421%)";
+      hoverBtnBg.style.transform = "translateX(490%)";
     } else if (btn.id == "other") {
       hoverBtnBg.style.width = "78px";
-      hoverBtnBg.style.transform = "translateX(540%)";
+      hoverBtnBg.style.transform = "translateX(611%)";
     }
   });
   btn.addEventListener("mouseout", () => {
-    btn.style.color = "black";
+    btn.style.color = "#e74d61";
+    //other btns become black
   });
 });
 
@@ -462,40 +340,16 @@ buttons.forEach((button) => {
 });
 
 // Add an event listener to each button
-document.querySelectorAll(".btns button").forEach((button) => {
+document.querySelectorAll("#portfolio .btns button").forEach((button) => {
   button.addEventListener("click", () => {
     const buttonId = button.getAttribute("id"); // Get the id of the clicked button
     const projects = document.querySelectorAll(".project"); // Get all project elements
-    //Add new classes to row
-    if (window.innerWidth > 767) {
-      const row = document.querySelector("#portfolio .projects .row");
-
-      if (buttonId == "shaw-all") {
-        row.classList.remove("row-cols-2", "justify-content-center");
-        row.classList.add("row-cols-1", "row-cols-md-2");
-      } else {
-        row.classList.add("row-cols-2", "justify-content-center");
-        row.classList.remove("row-cols-1", "row-cols-md-2");
-      }
-    } else {
-      const row = document.querySelector("#portfolio .projects .row");
-
-      if (buttonId == "shaw-all") {
-        row.classList.remove("row-cols-2", "justify-content-center");
-        row.classList.add("row-cols-1");
-      } else {
-        row.classList.add("row-cols-1");
-        row.classList.remove("row-cols-2");
-      }
-    }
 
     // Iterate over each project and toggle their visibility based on the button clicked
     projects.forEach((project) => {
       const projectDisplay = getComputedStyle(project).display;
 
-      if (buttonId === "show-all") {
-        project.style.display = "block"; // Show all projects
-      } else if (project.classList.contains(buttonId)) {
+      if (project.classList.contains(buttonId)) {
         if (projectDisplay === "none") {
           project.style.display = "block"; // Show the projects with matching class
         } else {
@@ -518,12 +372,13 @@ document.querySelectorAll(".btns button").forEach((button) => {
 // Set the initial display for each project
 const projects = document.querySelectorAll(".project");
 projects.forEach((project) => {
-  if (project.classList.contains("e-commerce")) {
+  if (project.classList.contains("selected-works")) {
     project.style.display = "block";
   } else {
     project.style.display = "none";
   }
 });
+
 //on submit form
 let form = document.querySelector("#contact form");
 let sendingDiv = document.querySelector("#contact #sending"); // Assuming the div has the class 'sending'
@@ -542,6 +397,10 @@ form.addEventListener("submit", (e) => {
     .then((response) => {
       // Set opacity of output_message div to 1
       document.querySelector("#contact  #message-sent").style.opacity = 1;
+      //get name and email and message from form
+      let name = document.querySelector("#contact form #name").value;
+      let email = document.querySelector("#contact form #email").value;
+      let message = document.querySelector("#contact form #message").value;
       // Reset form
       form.reset();
       //sending notification message by email
@@ -550,7 +409,7 @@ form.addEventListener("submit", (e) => {
         To: "ahmed.shehata.360@gmail.com",
         From: "mohamedaboukaram39@gmail.com",
         Subject: "🚨📊 You have a new message from your website..",
-        Body: "https://docs.google.com/spreadsheets/d/13nGsM0nl2Su_f5dovQK49VnsZOcRwJmrKdzIZ37wUpI/edit#gid=0",
+        Body: `Name: ${name} <br/> Email: ${email} <br/> Message: ${message}`,
       });
       // After 4 seconds, set opacity of output_message div to 0
       setTimeout(() => {

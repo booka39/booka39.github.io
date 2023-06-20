@@ -390,8 +390,10 @@
         <div class="btns-holder text-center">
           <div class="btns text-center p-2">
             <div id="hover-btn-bg" class="hover-btn-bg"></div>
-            <button type="button" id="shaw-all" class="btn">Show all</button>
-            <button type="button" id="e-commerce" class="btn active-btn">
+            <button type="button" id="selected-works" class="btn active-btn">
+              Selected Works
+            </button>
+            <button type="button" id="e-commerce" class="btn">
               E-commerce
             </button>
             <button type="button" id="healthcare" class="btn">
@@ -402,33 +404,56 @@
           </div>
         </div>
         <div class="projects mt-5">
-          <div class="row row-cols-1 row-cols-md-2 justify-content-center g-4">
+          <div class="projects-holder p-3">
             <!-- super store project  -->
-            <div class="project e-commerce shaw-all">
-              <div
-                class="col animate__fadeIn animate__animated"
-                data-bs-toggle="modal"
-                data-bs-toggle="modal"
-                data-bs-target="#super-store-modal"
-                Launch
-                demo
-                modal
-              >
-                <div class="card bg-dark text-black">
+            <div class="project e-commerce selected-works">
+              <div class="row">
+                <div class="col-6">
+                  <h5 class="project-header mt-3 mb-4">
+                    Online Superstore Performance Dashboard
+                  </h5>
+                  <p class="project-content mb-4">
+                    The dashboard provides an overview of the performance in
+                    terms of sales and profits, as well as customer behavior
+                    insights and product trends.
+                  </p>
+                  <button
+                    class="btn read-more mb-4"
+                    data-bs-toggle="modal"
+                    data-bs-toggle="modal"
+                    data-bs-target="#super-store-modal"
+                    Launch
+                    demo
+                    modal
+                  >
+                    <span class="hvr-underline-from-left pb-1 pt-3"
+                      >Read More</span
+                    >
+                  </button>
+                </div>
+                <div class="col-6 image align-self-center">
                   <img
                     src="pics/projects/super store/Executive Summary(Home).png"
                     class="card-img"
                     alt="..."
                   />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">
-                      Online Superstore Performance Dashboard
-                    </h5>
-                    <p class="card-text">
-                      The dashboard provides an overview of the performance in
-                      terms of sales and profits, as well as customer behavior
-                      insights and product trends.
-                    </p>
+
+                  <div class="d-flex justify-content-end my-3">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-toggle="modal"
+                      data-bs-target="#super-store-modal"
+                      Launch
+                      demo
+                      modal
+                    >
+                      <button class="Btn">
+                        <div class="text py-1">View</div>
+                        <div class="sign">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -551,30 +576,53 @@
               </div>
             </div>
             <!-- hotel booking project -->
-
-            <div class="project travel shaw-all">
-              <div
-                class="col animate__fadeIn animate__animated"
-                data-bs-toggle="modal"
-                data-bs-toggle="modal"
-                data-bs-target="#hotel-booking-modal"
-                Launch
-                demo
-                modal
-              >
-                <div class="card bg-dark text-black">
+            <div class="project travel selected-works">
+              <div class="row">
+                <div class="col-6">
+                  <h5 class="project-header mt-3 mb-4">
+                    Hotel Booking Analysis Report
+                  </h5>
+                  <p class="project-content mb-4">
+                    The dashboard is designed to help hotel managers and
+                    administrators understand and analyze booking trends and
+                    patterns.
+                  </p>
+                  <button
+                    class="btn read-more mb-4"
+                    data-bs-toggle="modal"
+                    data-bs-toggle="modal"
+                    data-bs-target="#hotel-booking-modal"
+                    Launch
+                    demo
+                    modal
+                  >
+                    <span class="hvr-underline-from-left pb-1 pt-3"
+                      >Read More</span
+                    >
+                  </button>
+                </div>
+                <div class="col-6 image align-self-center">
                   <img
                     src="pics/projects/hotel booking/Hotel Reservation Analysis(Home).jpg"
                     class="card-img"
                     alt="..."
                   />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Hotel Booking Analysis Report</h5>
-                    <p class="card-text">
-                      The dashboard is designed to help hotel managers and
-                      administrators understand and analyze booking trends and
-                      patterns.
-                    </p>
+                  <div class="d-flex justify-content-end my-3">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-toggle="modal"
+                      data-bs-target="#hotel-booking-modal"
+                      Launch
+                      demo
+                      modal
+                    >
+                      <button class="Btn">
+                        <div class="text py-1">View</div>
+                        <div class="sign">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -682,35 +730,56 @@
               </div>
             </div>
             <!-- survey project  -->
-
-            <div class="project other shaw-all">
-              <div
-                class="col animate__fadeIn animate__animated"
-                data-bs-toggle="modal"
-                data-bs-toggle="modal"
-                data-bs-target="#survey-modal"
-                Launch
-                demo
-                modal
-              >
-                <div class="card bg-dark text-black">
+            <div class="project other">
+              <div class="row">
+                <div class="col-6">
+                  <h5 class="project-header mt-3 mb-4">
+                    Product Survey Responses Analysis
+                  </h5>
+                  <p class="project-content mb-4">
+                    Multiple versions of Analysis of product survey with
+                    recommendations.
+                    <br />
+                    1) Diverging version. <br />
+                    2) Stacked bar version. <br />
+                    3) Multiple bar version.
+                  </p>
+                  <button
+                    class="btn read-more mb-4"
+                    data-bs-toggle="modal"
+                    data-bs-toggle="modal"
+                    data-bs-target="#survey-modal"
+                    Launch
+                    demo
+                    modal
+                  >
+                    <span class="hvr-underline-from-left pb-1 pt-3"
+                      >Read More</span
+                    >
+                  </button>
+                </div>
+                <div class="col-6 image align-self-center">
                   <img
-                    src="pics/projects/survey/Diverging version(Home).jpg"
+                    src="pics/projects/survey/Diverging version(Home) coursel.jpg"
                     class="card-img"
                     alt="..."
                   />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">
-                      Product Survey Responses Analysis
-                    </h5>
-                    <p class="card-text">
-                      Multiple versions of Analysis of product survey with
-                      recommendations.
-                      <br />
-                      1) Diverging version. <br />
-                      2) Stacked bar version. <br />
-                      3) Multiple bar version.
-                    </p>
+                  <div class="d-flex justify-content-end my-3">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-toggle="modal"
+                      data-bs-target="#survey-modal"
+                      Launch
+                      demo
+                      modal
+                    >
+                      <button class="Btn">
+                        <div class="text py-1">View</div>
+                        <div class="sign">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -832,34 +901,56 @@
               </div>
             </div>
             <!--travel project  -->
-            <div class="project travel shaw-all">
-              <div
-                class="col animate__fadeIn animate__animated"
-                data-bs-toggle="modal"
-                data-bs-toggle="modal"
-                data-bs-target="#travel-modal"
-                Launch
-                demo
-                modal
-              >
-                <div class="card bg-dark text-black">
+            <div class="project travel">
+              <div class="row">
+                <div class="col-6">
+                  <h5 class="project-header mt-3 mb-4">
+                    Reduce Marketing Budget for Travel Insurance company
+                  </h5>
+                  <p class="project-content mb-4">
+                    I was an analyst for Travel Assured which is a travel
+                    insurance company. They have had to cut their marketing
+                    budget by over 50 % due to covid-19 pandemic. So It is more
+                    important now than ever that they advertise in the right
+                    places and to the right people . I dived into their data to
+                    produce recommendations for its marketing team.
+                  </p>
+                  <button
+                    class="btn read-more mb-4"
+                    data-bs-toggle="modal"
+                    data-bs-toggle="modal"
+                    data-bs-target="#travel-modal"
+                    Launch
+                    demo
+                    modal
+                  >
+                    <span class="hvr-underline-from-left pb-1 pt-3"
+                      >Read More</span
+                    >
+                  </button>
+                </div>
+                <div class="col-6 image align-self-center">
                   <img
                     src="pics/projects/travel/travel home.jpeg"
                     class="card-img"
                     alt="travel"
                   />
-                  <div class="card-img-overlay travel-card">
-                    <h5 class="card-title">
-                      Reduce Marketing Budget for Travel Insurance company
-                    </h5>
-                    <p class="card-text">
-                      I was an analyst for Travel Assured which is a travel
-                      insurance company. They have had to cut their marketing
-                      budget by over 50 % due to covid-19 pandemic. So It is
-                      more important now than ever that they advertise in the
-                      right places and to the right people . I dived into their
-                      data to produce recommendations for its marketing team.
-                    </p>
+                  <div class="d-flex justify-content-end my-3">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-toggle="modal"
+                      data-bs-target="#travel-modal"
+                      Launch
+                      demo
+                      modal
+                    >
+                      <button class="Btn">
+                        <div class="text py-1">View</div>
+                        <div class="sign">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1040,31 +1131,53 @@
             </div>
             <!-- ER-admission project  -->
 
-            <div class="project healthcare shaw-all">
-              <div
-                class="col animate__fadeIn animate__animated"
-                data-bs-toggle="modal"
-                data-bs-toggle="modal"
-                data-bs-target="#er-admmission-modal"
-                Launch
-                demo
-                modal
-              >
-                <div class="card bg-dark text-black">
+            <div class="project healthcare selected-works">
+              <div class="row">
+                <div class="col-6">
+                  <h5 class="project-header mt-3 mb-4">
+                    Emergency Room Admission Dashboard
+                  </h5>
+                  <p class="project-content mb-4">
+                    Designed to help healthcare professionals understand and
+                    analyze emergency room admission trends in order to be ready
+                    to save more lives!
+                  </p>
+                  <button
+                    class="btn read-more mb-4"
+                    data-bs-toggle="modal"
+                    data-bs-toggle="modal"
+                    data-bs-target="#er-admmission-modal"
+                    Launch
+                    demo
+                    modal
+                  >
+                    <span class="hvr-underline-from-left pb-1 pt-3"
+                      >Read More</span
+                    >
+                  </button>
+                </div>
+                <div class="col-6 image align-self-center">
                   <img
                     src="pics/projects/ER admission/Home copy.jpg"
                     class="card-img"
                     alt="..."
                   />
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">
-                      Emergency Room Admission Dashboard
-                    </h5>
-                    <p class="card-text">
-                      Designed to help healthcare professionals understand and
-                      analyze emergency room admission trends in order to be
-                      ready to save more lives!
-                    </p>
+                  <div class="d-flex justify-content-end my-3">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-toggle="modal"
+                      data-bs-target="#er-admmission-modal"
+                      Launch
+                      demo
+                      modal
+                    >
+                      <button class="Btn">
+                        <div class="text py-1">View</div>
+                        <div class="sign">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
