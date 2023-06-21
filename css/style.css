@@ -682,6 +682,13 @@ header .datacamp {
   #portfolio .Btn .text {
     display: none;
   }
+  .Btn {
+    justify-content: center;
+  }
+  .sign {
+    padding: 0px;
+    height: 80%;
+  }
 }
 
 /* end portfolio */
