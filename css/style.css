@@ -6,31 +6,6 @@ body {
 
 /* For Webkit-based browsers (Chrome, Safari) */
 
-::-webkit-scrollbar {
-  width: 12px;
-  overflow-y: auto;
-  appearance: none;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  overflow-y: auto;
-  appearance: none;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 6px;
-  overflow-y: auto;
-  appearance: none;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-  overflow-y: auto;
-  appearance: none;
-}
-
 a {
   text-decoration: none;
 }
@@ -503,10 +478,11 @@ header .datacamp {
 #portfolio {
   background-color: #111111;
 }
-#portfolio .projects-holder {
+#portfolio .project {
   background-color: #10101a;
   border: 1px solid #fffcff1a;
   border-radius: 15px;
+  margin-bottom: 5vh;
 }
 
 #portfolio h2 {
@@ -543,6 +519,7 @@ header .datacamp {
 #portfolio .active-btn {
   color: #e74d61;
 }
+
 #portfolio .project .image img {
   border-radius: 15px;
 }
@@ -560,10 +537,13 @@ header .datacamp {
   border-radius: 50%;
   cursor: pointer;
   position: relative;
+  top: -75px;
+  right: 13px;
   overflow: hidden;
   transition-duration: 0.3s;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
   background-color: white;
+  /* mix-blend-mode: screen; */
 }
 
 /* plus sign */
@@ -576,6 +556,7 @@ header .datacamp {
   background-color: black;
   border-radius: 50%;
   padding: 9px;
+  background: black;
 }
 
 /* text */
@@ -646,7 +627,7 @@ header .datacamp {
 }
 #portfolio .read-more {
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   padding: 0;
 }
 .read-more span:hover {
@@ -686,7 +667,7 @@ header .datacamp {
     padding: 10vh !important;
   }
 }
-@media (max-width: 575.9px) {
+@media (max-width: 767.9px) {
   #portfolio .hover-btn-bg {
     display: none;
   }
