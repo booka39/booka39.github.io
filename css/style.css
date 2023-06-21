@@ -687,6 +687,9 @@ header .datacamp {
   .Btn .text {
     color: white;
   }
+  #portfolio .fa-arrow-right {
+    margin-left: 4px;
+  }
 }
 
 /* end portfolio */
