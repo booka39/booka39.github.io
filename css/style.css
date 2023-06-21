@@ -683,11 +683,7 @@ header .datacamp {
     display: none;
   }
   .Btn {
-    justify-content: center;
-  }
-  .sign {
-    padding: 0px;
-    height: 80%;
+    background-color: black;
   }
 }
 
