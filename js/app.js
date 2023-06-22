@@ -1,16 +1,3 @@
-/* -----------------------------------------------
-/* How to use? : Check the GitHub README
-/* ----------------------------------------------- */
-
-/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
-/*
-particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.js loaded - callback');
-});
-*/
-
-/* Otherwise just put the config content (json): */
-
 //arrow color
 
 const svgElement = document.querySelector(".arrow-down");
@@ -172,101 +159,125 @@ document.addEventListener("DOMContentLoaded", function () {
     window.open(targetURL, "_blank");
   });
 });
+/////////let's work together animation
+gsap.registerPlugin(ScrollTrigger);
+let speed = 100;
 
-// Get the contact div element
-var contactDiv = document.getElementById("contact");
-
-// Get the contact title element
-var contactTitle = contactDiv.querySelector(".contact-title");
-
-// Initialize the previous scrolling Y position
-var prevScrollY = window.scrollY || window.pageYOffset;
-
-// Initialize the scroll counter
-var scrollCounter = 0;
-
-// Initialize the original translation values
-var originalTranslateXFirst = 0;
-var originalTranslateXSec = 0;
-
-// Set the maximum translation values for 'first' and 'sec'
-var maxTranslateXFirst = -36;
-var maxTranslateXSec = 50;
-
-// Set the maximum opacity values for 'first' and 'sec'
-var maxOpacityFirst = 0.5;
-var maxOpacitySec = 0.5;
-
-// Add an event listener to the window scroll event
-window.addEventListener("scroll", function () {
-  // Get the current scrolling Y position
-  var scrollY = window.scrollY || window.pageYOffset;
-
-  // Get the top offset of the contact div minus 100 pixels
-  var contactTop = contactDiv.offsetTop - 100;
-
-  // Check if the scrolling Y position is at least 100 pixels above the contact div
-  if (scrollY >= contactTop) {
-    // Check if scrolling down
-    if (scrollY > prevScrollY) {
-      scrollCounter++;
-
-      // Calculate the translation and opacity values based on the scroll position
-      var translateXFirst = Math.min(-3 * scrollCounter, maxTranslateXFirst);
-      var translateXSec = Math.min(scrollCounter, maxTranslateXSec);
-      var opacityFirst = Math.max(1 - scrollCounter * 0.01, maxOpacityFirst);
-      var opacitySec = Math.max(1 - scrollCounter * 0.01, maxOpacitySec);
-
-      // Apply the calculated translations and opacities to the "first" and "sec" classes
-      contactTitle.querySelector(
-        ".first"
-      ).style.transform = `translateX(${translateXFirst}px)`;
-      contactTitle.querySelector(
-        ".sec"
-      ).style.transform = `translateX(${translateXSec}px)`;
-      contactTitle.querySelector(".first").style.opacity = opacityFirst;
-      contactTitle.querySelector(".sec").style.opacity = opacitySec;
-
-      // Save the current translation values as the original values
-      originalTranslateXFirst = translateXFirst;
-      originalTranslateXSec = translateXSec;
-    } else {
-      // Scrolling direction is up
-      // Check if the original translation values are not zero
-      if (originalTranslateXFirst !== 0 && originalTranslateXSec !== 0) {
-        scrollCounter--;
-
-        // Calculate the translation and opacity values based on the scroll position
-        var translateXFirst = Math.min(-3 * scrollCounter, maxTranslateXFirst);
-        var translateXSec = Math.min(scrollCounter, maxTranslateXSec);
-        var opacityFirst = Math.max(1 - scrollCounter * 0.01, maxOpacityFirst);
-        var opacitySec = Math.max(1 - scrollCounter * 0.01, maxOpacitySec);
-
-        // Apply the calculated translations and opacities to the "first" and "sec" classes
-        contactTitle.querySelector(
-          ".first"
-        ).style.transform = `translateX(${translateXFirst}px)`;
-        contactTitle.querySelector(
-          ".sec"
-        ).style.transform = `translateX(${translateXSec}px)`;
-        contactTitle.querySelector(".first").style.opacity = opacityFirst;
-        contactTitle.querySelector(".sec").style.opacity = opacitySec;
-      }
-    }
-  } else {
-    // The scrolling Y position is not at least 100 pixels above the contact div
-    contactTitle.querySelector(".first").style.transform = "translateX(0)";
-    contactTitle.querySelector(".sec").style.transform = "translateX(0)";
-    contactTitle.querySelector(".first").style.opacity = "1";
-    contactTitle.querySelector(".sec").style.opacity = "1";
-
-    // Reset the scroll counter to 0
-    scrollCounter = 0;
-  }
-
-  // Update the previous scrolling Y position
-  prevScrollY = scrollY;
+/* Clouds  */
+let clouds = gsap.timeline();
+ScrollTrigger.create({
+  animation: clouds,
+  trigger: "#contact",
+  start: "top+=100 center", // Animation starts when the top of the viewport reaches the top of the #contact element
+  end: "bottom+=20", // Animation ends when the bottom of the viewport is 20% from the bottom
+  scrub: 1,
 });
+console.log(clouds);
+
+clouds.to("#first", { x: -110 }, 0);
+clouds.to("#sec", { x: 110 }, 0);
+
+//reset scrollbar position after refresh
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
+//////////////////////////////////////////
+// // Get the contact div element
+// var contactDiv = document.getElementById("contact");
+
+// // Get the contact title element
+// var contactTitle = contactDiv.querySelector(".contact-title");
+
+// // Initialize the previous scrolling Y position
+// var prevScrollY = window.scrollY || window.pageYOffset;
+
+// // Initialize the scroll counter
+// var scrollCounter = 0;
+
+// // Initialize the original translation values
+// var originalTranslateXFirst = 0;
+// var originalTranslateXSec = 0;
+
+// // Set the maximum translation values for 'first' and 'sec'
+// var maxTranslateXFirst = -36;
+// var maxTranslateXSec = 50;
+
+// // Set the maximum opacity values for 'first' and 'sec'
+// var maxOpacityFirst = 0.5;
+// var maxOpacitySec = 0.5;
+
+// // Add an event listener to the window scroll event
+// window.addEventListener("scroll", function () {
+//   // Get the current scrolling Y position
+//   var scrollY = window.scrollY || window.pageYOffset;
+
+//   // Get the top offset of the contact div minus 100 pixels
+//   var contactTop = contactDiv.offsetTop - 100;
+
+//   // Check if the scrolling Y position is at least 100 pixels above the contact div
+//   if (scrollY >= contactTop) {
+//     // Check if scrolling down
+//     if (scrollY > prevScrollY) {
+//       scrollCounter++;
+
+//       // Calculate the translation and opacity values based on the scroll position
+//       var translateXFirst = Math.min(-3 * scrollCounter, maxTranslateXFirst);
+//       var translateXSec = Math.min(scrollCounter, maxTranslateXSec);
+//       var opacityFirst = Math.max(1 - scrollCounter * 0.01, maxOpacityFirst);
+//       var opacitySec = Math.max(1 - scrollCounter * 0.01, maxOpacitySec);
+
+//       // Apply the calculated translations and opacities to the "first" and "sec" classes
+//       contactTitle.querySelector(
+//         ".first"
+//       ).style.transform = `translateX(${translateXFirst}px)`;
+//       contactTitle.querySelector(
+//         ".sec"
+//       ).style.transform = `translateX(${translateXSec}px)`;
+//       contactTitle.querySelector(".first").style.opacity = opacityFirst;
+//       contactTitle.querySelector(".sec").style.opacity = opacitySec;
+
+//       // Save the current translation values as the original values
+//       originalTranslateXFirst = translateXFirst;
+//       originalTranslateXSec = translateXSec;
+//     } else {
+//       // Scrolling direction is up
+//       // Check if the original translation values are not zero
+//       if (originalTranslateXFirst !== 0 && originalTranslateXSec !== 0) {
+//         scrollCounter--;
+
+//         // Calculate the translation and opacity values based on the scroll position
+//         var translateXFirst = Math.min(-3 * scrollCounter, maxTranslateXFirst);
+//         var translateXSec = Math.min(scrollCounter, maxTranslateXSec);
+//         var opacityFirst = Math.max(1 - scrollCounter * 0.01, maxOpacityFirst);
+//         var opacitySec = Math.max(1 - scrollCounter * 0.01, maxOpacitySec);
+
+//         // Apply the calculated translations and opacities to the "first" and "sec" classes
+//         contactTitle.querySelector(
+//           ".first"
+//         ).style.transform = `translateX(${translateXFirst}px)`;
+//         contactTitle.querySelector(
+//           ".sec"
+//         ).style.transform = `translateX(${translateXSec}px)`;
+//         contactTitle.querySelector(".first").style.opacity = opacityFirst;
+//         contactTitle.querySelector(".sec").style.opacity = opacitySec;
+//       }
+//     }
+//   } else {
+//     // The scrolling Y position is not at least 100 pixels above the contact div
+//     contactTitle.querySelector(".first").style.transform = "translateX(0)";
+//     contactTitle.querySelector(".sec").style.transform = "translateX(0)";
+//     contactTitle.querySelector(".first").style.opacity = "1";
+//     contactTitle.querySelector(".sec").style.opacity = "1";
+
+//     // Reset the scroll counter to 0
+//     scrollCounter = 0;
+//   }
+
+//   // Update the previous scrolling Y position
+//   prevScrollY = scrollY;
+// });
+///////////////////////////////////////////////
 
 //hover on svg icons
 let cards = document.querySelectorAll("#services .card");

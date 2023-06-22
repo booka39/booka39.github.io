@@ -721,7 +721,7 @@ header .datacamp {
   color: white;
   position: relative;
   font-weight: 500 !important;
-  transition: transform 0.5s ease-in-out;
+  /* transition: transform 0.5s ease-in-out; */
 }
 
 .sec {
