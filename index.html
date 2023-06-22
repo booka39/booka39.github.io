@@ -207,7 +207,7 @@
               variety of tools such as Tableau, Power BI, and SQL. My goal is to
               provide critical insights that drive business growth and success.
             </p>
-            <div class="d-flex justify-content-around">
+            <div class="d-flex justify-content-around about-me-btn-holder">
               <button type="button" id="show-cv" class="btn my-3 ms-4 show-cv">
                 <a
                   href="https://drive.google.com/file/d/1oGcHj8OxaJp7gOGS6Qg7pyf2_byUv3Tm/view?usp=drivesdk"
@@ -410,7 +410,9 @@
               <div
                 class="row pt-4 px-4 animate__animated animate__fadeIn animate__delay-.5s"
               >
-                <div class="col-12 col-md-6 order-2 order-md-1">
+                <div
+                  class="col-12 col-md-6 order-2 order-md-1 align-self-center"
+                >
                   <h5 class="project-header mb-4">
                     Online Superstore Performance Dashboard
                   </h5>
@@ -453,7 +455,7 @@
                     >
                       <button class="Btn">
                         <div class="text py-1">View</div>
-                        <div class="sign">
+                        <div class="sign" style="background: #181824">
                           <i class="fa-solid fa-arrow-right"></i>
                         </div>
                       </button>
@@ -579,12 +581,136 @@
                 </div>
               </div>
             </div>
+            <!-- ER-admission project  -->
+
+            <div class="project healthcare selected-works">
+              <div
+                class="row pt-4 px-4 animate__animated animate__fadeIn animate__delay-.5"
+              >
+                <div
+                  class="col-12 col-md-6 order-2 order-md-1 align-self-center"
+                >
+                  <h5 class="project-header mb-4">
+                    Emergency Room Admission Dashboard
+                  </h5>
+                  <p class="project-content mb-4">
+                    Designed to help healthcare professionals understand and
+                    analyze emergency room admission trends in order to be ready
+                    to save more lives!
+                  </p>
+                  <button
+                    class="btn read-more mb-4"
+                    data-bs-toggle="modal"
+                    data-bs-toggle="modal"
+                    data-bs-target="#er-admmission-modal"
+                    Launch
+                    demo
+                    modal
+                  >
+                    <span class="hvr-underline-from-left pb-1 pt-3"
+                      >Read More</span
+                    >
+                  </button>
+                </div>
+                <div
+                  class="col-12 col-md-6 order-1 order-md-2 image align-self-center"
+                >
+                  <img
+                    src="pics/projects/ER admission/Home copy.jpg"
+                    class="card-img"
+                    alt="..."
+                  />
+                  <div class="d-flex justify-content-end my-3">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-toggle="modal"
+                      data-bs-target="#er-admmission-modal"
+                      Launch
+                      demo
+                      modal
+                    >
+                      <button class="Btn">
+                        <div class="text py-1">View</div>
+                        <div class="sign">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="er-admmission-modal"
+                tabindex="-1"
+                aria-labelledby="er-admmission-modal-label"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Emergency Room Admission Dashboard
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>
+                        The Emergency Room Admission Dashboard . Which is
+                        designed to help healthcare professionals understand and
+                        analyze emergency room admission trends in order to be
+                        ready to save more lives! <br />
+                        The dashboard is divided into two main pages as always,
+                      </p>
+                      <p>
+                        <b>📍 Overview Section:</b> <br />
+                        <b>- Summary:</b> Provides an overview of the total
+                        number of ER admissions, and patients' average wait
+                        time. <br />
+                        <b>- Time Series:</b> A time series graph that shows the
+                        trend of emergency room admissions over time. <br />
+                        <b>- Demographics:</b> Displays charts that show the
+                        number of admissions by age group and gender. <br />
+                        <b>- Referral:</b> The bar chart presented in this
+                        section illustrates the count of patients referred by
+                        various departments.
+                      </p>
+                      <img
+                        class="img-fluid"
+                        src="pics/projects/ER admission/Home copy.jpg"
+                        alt=""
+                      />
+                      <p class="py-3">
+                        <b>📍 Patient Details Section:</b> <br />
+                        - Visual representation of patient data in the emergency
+                        room, including patient ID, visit date, demographics,
+                        referral department, wait time and status (admitted or
+                        not).
+                      </p>
+                      <img
+                        class="img-fluid"
+                        src="pics/projects/ER admission/Patients Details.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- hotel booking project -->
             <div class="project travel selected-works">
               <div
                 class="row pt-4 px-4 animate__animated animate__fadeIn animate__delay-.5"
               >
-                <div class="col-12 col-md-6 order-2 order-md-1">
+                <div
+                  class="col-12 col-md-6 order-2 order-md-1 align-self-center"
+                >
                   <h5 class="project-header mb-4">
                     Hotel Booking Analysis Report
                   </h5>
@@ -626,7 +752,16 @@
                     >
                       <button class="Btn">
                         <div class="text py-1">View</div>
-                        <div class="sign">
+                        <div
+                          class="sign"
+                          style="
+                            background: linear-gradient(
+                              to right,
+                              white 74%,
+                              #dee2e8
+                            );
+                          "
+                        >
                           <i class="fa-solid fa-arrow-right"></i>
                         </div>
                       </button>
@@ -742,7 +877,9 @@
               <div
                 class="row pt-4 px-4 animate__animated animate__fadeIn animate__delay-.5"
               >
-                <div class="col-12 col-md-6 order-2 order-md-1">
+                <div
+                  class="col-12 col-md-6 order-2 order-md-1 align-self-center"
+                >
                   <h5 class="project-header mb-4">
                     Product Survey Responses Analysis
                   </h5>
@@ -917,7 +1054,9 @@
               <div
                 class="row pt-4 px-4 animate__animated animate__fadeIn animate__delay-.5"
               >
-                <div class="col-12 col-md-6 order-2 order-md-1">
+                <div
+                  class="col-12 col-md-6 order-2 order-md-1 align-self-center"
+                >
                   <h5 class="project-header mb-4">
                     Reduce Marketing Budget for Travel Insurance company
                   </h5>
@@ -1145,126 +1284,6 @@
                 </div>
               </div>
             </div>
-            <!-- ER-admission project  -->
-
-            <div class="project healthcare selected-works">
-              <div
-                class="row pt-4 px-4 animate__animated animate__fadeIn animate__delay-.5"
-              >
-                <div class="col-12 col-md-6 order-2 order-md-1">
-                  <h5 class="project-header mb-4">
-                    Emergency Room Admission Dashboard
-                  </h5>
-                  <p class="project-content mb-4">
-                    Designed to help healthcare professionals understand and
-                    analyze emergency room admission trends in order to be ready
-                    to save more lives!
-                  </p>
-                  <button
-                    class="btn read-more mb-4"
-                    data-bs-toggle="modal"
-                    data-bs-toggle="modal"
-                    data-bs-target="#er-admmission-modal"
-                    Launch
-                    demo
-                    modal
-                  >
-                    <span class="hvr-underline-from-left pb-1 pt-3"
-                      >Read More</span
-                    >
-                  </button>
-                </div>
-                <div
-                  class="col-12 col-md-6 order-1 order-md-2 image align-self-center"
-                >
-                  <img
-                    src="pics/projects/ER admission/Home copy.jpg"
-                    class="card-img"
-                    alt="..."
-                  />
-                  <div class="d-flex justify-content-end my-3">
-                    <div
-                      data-bs-toggle="modal"
-                      data-bs-toggle="modal"
-                      data-bs-target="#er-admmission-modal"
-                      Launch
-                      demo
-                      modal
-                    >
-                      <button class="Btn">
-                        <div class="text py-1">View</div>
-                        <div class="sign">
-                          <i class="fa-solid fa-arrow-right"></i>
-                        </div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Modal -->
-              <div
-                class="modal fade"
-                id="er-admmission-modal"
-                tabindex="-1"
-                aria-labelledby="er-admmission-modal-label"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog modal-xl modal-dialog-scrollable">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">
-                        Emergency Room Admission Dashboard
-                      </h5>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <p>
-                        The Emergency Room Admission Dashboard . Which is
-                        designed to help healthcare professionals understand and
-                        analyze emergency room admission trends in order to be
-                        ready to save more lives! <br />
-                        The dashboard is divided into two main pages as always,
-                      </p>
-                      <p>
-                        <b>📍 Overview Section:</b> <br />
-                        <b>- Summary:</b> Provides an overview of the total
-                        number of ER admissions, and patients' average wait
-                        time. <br />
-                        <b>- Time Series:</b> A time series graph that shows the
-                        trend of emergency room admissions over time. <br />
-                        <b>- Demographics:</b> Displays charts that show the
-                        number of admissions by age group and gender. <br />
-                        <b>- Referral:</b> The bar chart presented in this
-                        section illustrates the count of patients referred by
-                        various departments.
-                      </p>
-                      <img
-                        class="img-fluid"
-                        src="pics/projects/ER admission/Home copy.jpg"
-                        alt=""
-                      />
-                      <p class="py-3">
-                        <b>📍 Patient Details Section:</b> <br />
-                        - Visual representation of patient data in the emergency
-                        room, including patient ID, visit date, demographics,
-                        referral department, wait time and status (admitted or
-                        not).
-                      </p>
-                      <img
-                        class="img-fluid"
-                        src="pics/projects/ER admission/Patients Details.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -1311,7 +1330,10 @@
               <div class="ps-3">
                 <p class="pt-2">MAIL</p>
                 <p class="pt-md-0">
-                  <a href="mailto:Ahmed.shehata.360@gmail.com" target="_blank"
+                  <a
+                    class="email-me"
+                    href="mailto:Ahmed.shehata.360@gmail.com"
+                    target="_blank"
                     >ahmed.shehata.360@gmail.com</a
                   >
                 </p>

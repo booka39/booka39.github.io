@@ -525,7 +525,7 @@ header .datacamp {
 }
 
 #portfolio .fa-arrow-right {
-  color: white;
+  color: #e74d61;
 }
 .Btn {
   display: flex;
@@ -553,10 +553,9 @@ header .datacamp {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
   border-radius: 50%;
   padding: 9px;
-  background: black;
+  /* set background to white and green with gradient hotizontal  */
 }
 
 /* text */
@@ -579,7 +578,6 @@ header .datacamp {
   width: 30%;
   transition-duration: 0.3s;
   padding-left: 20px;
-  transform: rotate(-30deg);
 }
 /* hover effect button's text */
 
@@ -593,7 +591,6 @@ header .datacamp {
   width: 30%;
   transition-duration: 0.3s;
   padding-left: 20px;
-  transform: rotate(-30deg);
 }
 
 #portfolio .project:hover .text {
@@ -636,7 +633,7 @@ header .datacamp {
   transition: all 0.4s ease-in-out;
 }
 .hvr-underline-from-left::before {
-  right: 80%;
+  right: 53%;
   background: #e74d61;
 }
 .link-survey-project {
@@ -683,6 +680,9 @@ header .datacamp {
   .Btn {
     background-color: black;
     border: 4px solid white;
+  }
+  .sign {
+    background: black !important;
   }
   .Btn .text {
     color: white;
@@ -1031,3 +1031,32 @@ body.light.contact .contactform textarea:focus,
 }
 
 /* end contact */
+
+/* adjustment for media query 400px or low */
+@media (max-width: 460px) {
+  header .text-holder {
+    padding: 0;
+  }
+  header .text-holder p:nth-child(2) {
+    font-size: 25px;
+  }
+  .hire-me,
+  .show-cv {
+    margin: auto !important;
+    margin-bottom: 1rem !important;
+  }
+  .about-me-btn-holder {
+    display: block !important;
+  }
+  .contact .title-bg span {
+    font-size: 44px;
+    line-height: 7.38;
+  }
+  .contact h2 {
+    font-size: 26.5px;
+  }
+  .contact .email-me,
+  .contact .whatsapp-me a {
+    font-size: 11px;
+  }
+}
