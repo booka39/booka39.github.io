@@ -520,7 +520,7 @@ header .datacamp {
 }
 
 #portfolio .active-btn {
-  color: #e74d61;
+  color: white;
 }
 
 #portfolio .project .image img {
@@ -710,11 +710,6 @@ header .datacamp {
     padding-left: 6rem;
     padding-right: 6rem;
   }
-}
-
-.contact-title {
-  padding: 19vh 0;
-  margin-left: 6%;
 }
 
 .contact .first,
@@ -998,9 +993,7 @@ body.light.contact .contactform textarea:focus,
   .contact .sec {
     font-size: 50px;
   }
-  .contact-title {
-    margin-left: 9% !important;
-  }
+
   .contact .title-bg span {
     font-size: 70px;
     line-height: 4.78;
@@ -1024,12 +1017,6 @@ body.light.contact .contactform textarea:focus,
   }
   .contact h2 {
     font-size: 46px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.9px) {
-  .contact-title {
-    margin-left: 0;
   }
 }
 

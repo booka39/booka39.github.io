@@ -307,10 +307,6 @@ const buttons = document.querySelectorAll("#portfolio .btns button");
 // Add hover event listener to each button
 buttons.forEach((button) => {
   button.addEventListener("mouseover", () => {
-    //if the button is not active set color to black
-    if (button.classList.contains("active-btn")) {
-      button.style.color = "#e74d61";
-    }
     // Get the hover button background element
     const hoverBtnBg = document.querySelector("#portfolio .btns .hover-btn-bg");
 
