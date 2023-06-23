@@ -299,7 +299,7 @@ header .datacamp {
 }
 
 .about-me-img-holder .icons .tableau:hover {
-  background-color: #e74d61;
+  fill: #e74d61 !important;
   border: none;
 }
 
@@ -832,9 +832,9 @@ header .datacamp {
   border: #0072b1 solid 2px;
 }
 
-.icons .tableau:hover {
-  background-color: #21467f;
-  border: #21467f solid 2px;
+.contact .icons .tableau:hover {
+  background-color: #0072b1;
+  border: #0072b1 solid 2px;
 }
 
 .icons .twitter:hover,

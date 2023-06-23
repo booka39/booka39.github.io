@@ -240,6 +240,30 @@ buttons.forEach((button) => {
         project.style.display = "none";
       }
     });
+    /////////let's work together animation
+
+    /* Clouds  */
+    if (
+      buttonId === "e-commerce" ||
+      buttonId === "healthcare" ||
+      buttonId === "travel" ||
+      buttonId === "other"
+    ) {
+      let clouds = gsap.timeline();
+      ScrollTrigger.create({
+        animation: clouds,
+        trigger: "#contact",
+        start: "top+=100 center", // Animation starts when the top of the contact element is 100 pixels below the top of the viewport
+        end: "bottom+=20", // Animation ends 300 pixels from the start position
+        scrub: 1,
+      });
+      clouds.to("#first", { x: -110 }, 0);
+      clouds.to("#sec", { x: 110 }, 0);
+      //reset scrollbar position after refresh
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      };
+    }
   });
 });
 
