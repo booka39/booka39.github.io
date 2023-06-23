@@ -1050,3 +1050,65 @@ body.light.contact .contactform textarea:focus,
     font-size: 15px;
   }
 }
+/* BACK TOP BUTTON */
+.back-top {
+  display: flex;
+  justify-content: start;
+}
+
+.back-top button {
+  width: 150px;
+  height: 50px;
+  margin: 20px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-top button p {
+  color: #fff !important;
+}
+
+.back-top button p:before,
+.back-top button p:after {
+  position: absolute;
+  width: 100%;
+  transition: all 0.1s cubic-bezier(0.35, 0.1, 0.25, 1);
+  z-index: 1;
+  left: 0;
+}
+
+.back-top button p:before {
+  content: attr(data-title);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.back-top button p:after {
+  content: attr(data-text);
+  top: 150%;
+  color: #ffffff;
+}
+
+.back-top button:hover p:before {
+  top: -50%;
+  transform: rotate(5deg);
+}
+
+.back-top button:hover p:after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.back-top button .fa-chevron-up {
+  position: absolute;
+  left: 0px;
+}

@@ -257,7 +257,7 @@ projects.forEach((project) => {
 let clouds = gsap.timeline();
 ScrollTrigger.create({
   animation: clouds,
-  trigger: "#first",
+  trigger: "#contact",
   start: "top+=100 center", // Animation starts when the top of the contact element is 100 pixels below the top of the viewport
   end: "bottom+=20", // Animation ends 300 pixels from the start position
   scrub: 1,
@@ -308,4 +308,10 @@ form.addEventListener("submit", (e) => {
       sendingDiv.style.opacity = 0;
     })
     .catch((error) => console.error("Error!", error.message));
+});
+
+//.back-top button on click scroll to top
+let backTop = document.querySelector(".back-top");
+backTop.addEventListener("click", () => {
+  window.scrollTo(0, 0);
 });
