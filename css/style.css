@@ -41,7 +41,10 @@ h2 {
   font-family: "Poppins", "sans-seri" !important;
   font-weight: 700 !important;
 }
-
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
 /*  start nav*/
 
 nav {
@@ -513,7 +516,7 @@ header .datacamp {
 #portfolio .btn {
   border-radius: 30px;
   border: none;
-  color: #e74d61;
+  color: black;
 }
 
 #portfolio .active-btn {

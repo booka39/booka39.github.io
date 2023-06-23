@@ -304,90 +304,73 @@ cards.forEach((card) => {
 // Get all the buttons
 const buttons = document.querySelectorAll("#portfolio .btns button");
 
-//hover on btns portfolio
-//select all buttons in class btns
-let btns = document.querySelectorAll("#portfolio .btns button");
-//if hover on button #selected-works change width of .hover-btn-bg to 89 px
-//if hover on button #e-commerce change width of .hover-btn-bg to width: 116px; and transform: translateX(84%);
-//if hover on button #healthcare change width of .hover-btn-bg to width: 116px; and transform: translateX(168%);
-//if hover on button #travel change width of .hover-btn-bg to width: 116px; and transform: translateX(252%);
-//if hover on button #other change width of .hover-btn-bg to width: 116px; and transform: translateX(336%);
-//for each button in btns if hover set color to white and if hover end set color to black
-btns.forEach((btn) => {
-  btn.addEventListener("mouseover", () => {
-    btn.style.color = "white";
-    let hoverBtnBg = document.querySelector("#portfolio .btns .hover-btn-bg");
-    if (btn.id == "selected-works") {
+// Add hover event listener to each button
+buttons.forEach((button) => {
+  button.addEventListener("mouseover", () => {
+    //if the button is not active set color to black
+    if (button.classList.contains("active-btn")) {
+      button.style.color = "#e74d61";
+    }
+    // Get the hover button background element
+    const hoverBtnBg = document.querySelector("#portfolio .btns .hover-btn-bg");
+
+    // Set the width and transform properties based on the button id
+    if (button.id === "selected-works") {
       hoverBtnBg.style.width = "148px";
       hoverBtnBg.style.transform = "translateX(0%)";
-    } else if (btn.id == "e-commerce") {
+    } else if (button.id === "e-commerce") {
       hoverBtnBg.style.width = "135px";
       hoverBtnBg.style.transform = "translateX(112%)";
-    } else if (btn.id == "healthcare") {
+    } else if (button.id === "healthcare") {
       hoverBtnBg.style.width = "119px";
       hoverBtnBg.style.transform = "translateX(239%)";
-    } else if (btn.id == "travel") {
+    } else if (button.id === "travel") {
       hoverBtnBg.style.width = "82px";
       hoverBtnBg.style.transform = "translateX(490%)";
-    } else if (btn.id == "other") {
+    } else if (button.id === "other") {
       hoverBtnBg.style.width = "78px";
       hoverBtnBg.style.transform = "translateX(611%)";
     }
   });
-  btn.addEventListener("mouseout", () => {
-    btn.style.color = "#e74d61";
-    //other btns become black
+});
+// Add mouseout event listener to each button
+//if the button is not active set color to black
+buttons.forEach((button) => {
+  button.addEventListener("mouseout", () => {
+    if (!button.classList.contains("active-btn")) {
+      button.style.color = "black";
+    }
   });
 });
 
 // Add click event listener to each button
 buttons.forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("mouseover", () => {
     // Remove active class from all buttons
     buttons.forEach((btn) => btn.classList.remove("active-btn"));
     // Add active class to the clicked button
     button.classList.add("active-btn");
-  });
-});
 
-// Add an event listener to each button
-document.querySelectorAll("#portfolio .btns button").forEach((button) => {
-  button.addEventListener("click", () => {
     const buttonId = button.getAttribute("id"); // Get the id of the clicked button
     const projects = document.querySelectorAll(".project"); // Get all project elements
 
-    // Iterate over each project and toggle their visibility based on the button clicked
+    // Toggle the visibility of projects based on the button clicked
     projects.forEach((project) => {
-      const projectDisplay = getComputedStyle(project).display;
-
       if (project.classList.contains(buttonId)) {
-        if (projectDisplay === "none") {
-          project.style.display = "block"; // Show the projects with matching class
-        } else {
-          project.style.display = "none"; // Hide the projects with matching class
-          setTimeout(() => {
-            project.style.display = "block"; // Show the projects with matching class
-          }, 0);
-        }
+        project.style.display = "block";
       } else {
-        project.style.display = "none"; // Hide the projects without matching class
+        project.style.display = "none";
       }
     });
-
-    // Toggle the active class on the clicked button
-    document.querySelector(".btns .active-btn").classList.remove("active-btn");
-    button.classList.add("active-btn");
   });
 });
 
 // Set the initial display for each project
 const projects = document.querySelectorAll(".project");
 projects.forEach((project) => {
-  if (project.classList.contains("selected-works")) {
-    project.style.display = "block";
-  } else {
-    project.style.display = "none";
-  }
+  project.style.display = project.classList.contains("selected-works")
+    ? "block"
+    : "none";
 });
 
 //on submit form
